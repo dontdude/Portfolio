@@ -1,0 +1,180 @@
+.abt{
+  display : flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 6rem auto;
+}
+.abt-left{
+  /* for absolute positioning of background card */
+  /* position: relative; */
+  /* align content of this div to center */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  margin: 0 auto;
+}
+.abt-right{
+  margin: 0 auto;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  justify-content: center;
+  width: 50%;
+}
+.abt-card {
+  width: 400px;
+  height: 400px;
+}
+/* .abt-card.bg{
+  position: absolute;
+  bottom: 50px;
+  left: 10px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #e5ebef, #eddede);
+  box-shadow: 4px 4px 8px #928e8e, -4px -4px 8px #ffffff;
+} */
+.abt-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.abt-right .btn_shadow {
+  width: 160px;
+}
+.abt-sub{
+  color: rgb(20, 87, 220);
+  /* top and bottom  || left and right */
+  margin: 20px 0px;
+}
+.abt-desc{
+  font-weight: 300;
+  margin: 10px auto;
+}
+
+
+@media (max-width: 768px) {
+  .abt{
+    margin: 2rem 1rem;
+  }
+  .abt-card.bg {
+    bottom: 20px;
+    right: 60px;
+  }
+  .abt-card{
+    width: 250px;
+    height: 250px;
+  }
+  .abt .title {
+    margin-top: 20px;
+    font-size: 40px;
+    text-align: center;
+  }
+  .abt-right .btn_shadow {
+    width: 160px;
+    margin: 2rem auto;
+  }
+  .abt-con{
+    display: none;
+  }
+  .abt-right{
+    width: 100%;
+  }
+  .abt-right p {
+    font-size: 16px;
+  }
+}
+
+/* ---- Resume Part ----- */
+.Resume .heading h1 {
+  font-size: 20px;
+}
+.Resume .content {
+  max-width: 85%;
+  margin: auto;
+}
+.Resume .box {
+  padding: 40px;
+}
+.Resume hr {
+  margin: 30px 0 30px 0;
+  border: 1px solid #e3e9ed;
+  background-color: #e3e9ed;
+}
+.Resume .rate .btn_shadow {
+  color: #ff014f;
+  padding: 15px 30px;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.Resume p {
+  font-size: 18px;
+  transition: 0.5s;
+}
+.Resume .box {
+  margin-bottom: 40px;
+  position: relative;
+}
+.Resume .btn_shadow:hover {
+  transform: translate(0);
+}
+.Resume .box:hover .btn_shadow {
+  background: #ff3a75;
+  box-shadow: none;
+  color: white;
+}
+.Resume .box:hover p {
+  color: white;
+}
+.Resume .content-section {
+  position: relative;
+}
+.Resume .left {
+  position: relative;
+}
+.Resume .left::after {
+  content: "";
+  position: absolute;
+  top: 6%;
+  left: 0;
+  height: 118vh;
+  width: 5px;
+  background: #d9dee2;
+  z-index: -2;
+}
+.Resume .box::after {
+  content: "";
+  position: absolute;
+  top: 13%;
+  left: -8%;
+  height: 5px;
+  width: 50px;
+  background: #d9dee2;
+}
+.Resume .box::before {
+  content: "";
+  position: absolute;
+  top: 11%;
+  left: -10%;
+  height: 10px;
+  width: 10px;
+  background: #fff;
+  border: 5px solid #d9dee2;
+  border-radius: 50%;
+  z-index: 5;
+  transition: 0.5s;
+}
+.Resume .box:hover.box:before {
+  background: #ff3a75;
+}
+@media (max-width: 768px) {
+  .Resume .d_flex {
+    flex-direction: column;
+  }
+  .Resume .left::after {
+    top: 14%;
+    height: 105vh;
+    left: 23px;
+  }
+}
