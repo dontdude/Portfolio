@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import Zoom from 'react-reveal/Zoom';
 
 const Card = (props) => {
   const [modal, setModal] = useState(false)
@@ -30,32 +31,34 @@ const Card = (props) => {
 
   return (
     <>
-      <div className='Prj-card btn_shadow '>
-        <div className='card-title'>
-          <h2 onClick={toggleModal}>{props.title}</h2>
-          <a href='#popup' className='arrow' onClick={toggleModal}>
-            <i class='fas fa-arrow-right'></i>
-          </a>
+      <Zoom bottom>
+        <div className='Prj-card btn_shadow '>
+          <div className='card-title'>
+            <h2 onClick={toggleModal}>{props.title}</h2>
+            <a href='#popup' className='arrow' onClick={toggleModal}>
+              <i class='fas fa-arrow-right'></i>
+            </a>
+          </div>
+          <div className="desc">
+              <p>{props.details}</p>
+          </div>
+          <hr />
+  
+          {/* <div className='d_flex'>
+            <i className='far fa-star'>{props.stars}</i>
+            <i className='fas fa-code-branch'>{props.fork}</i>
+          </div> */}
+  
+          <div className="card-btn">
+            <a className='btn_shadow' href={props.link}>
+              <i class="fab fa-github"></i> Repo
+            </a>
+            <button className='btn_shadow dtl-btn' onClick={toggleModal}>
+              <i class='fas fa-arrow-right'></i> Detail
+            </button>
+          </div>
         </div>
-        <div className="desc">
-            <p>{props.details}</p>
-        </div>
-        <hr />
-
-        {/* <div className='d_flex'>
-          <i className='far fa-star'>{props.stars}</i>
-          <i className='fas fa-code-branch'>{props.fork}</i>
-        </div> */}
-
-        <div className="card-btn">
-          <a className='btn_shadow' href={props.link}>
-            <i class="fab fa-github"></i> Repo
-          </a>
-          <button className='btn_shadow dtl-btn' onClick={toggleModal}>
-            <i class='fas fa-arrow-right'></i> Detail
-          </button>
-        </div>
-      </div>
+      </Zoom>
 
       {/* Popup box */}
       {modal && (

@@ -11,7 +11,7 @@ html {
 }
 body{
   font-family: 'Ubuntu', sans-serif;
-  background-color: rgb(237, 245, 248);
+  background-color: rgb(232, 244, 253);
   overflow-x: hidden;
 }
 .title {
@@ -52,8 +52,8 @@ button {
   border-color: none;
 }
 
-img{
-  border-radius: 10px;
+.img-shadow{
+  border-radius: 3%;
   background: linear-gradient(145deg, #e9ecee, #fdfcfc);
   box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
 }
@@ -74,7 +74,7 @@ img{
   box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
 }
 .btn_shadow:hover {
-  background: yellowgreen;
+  background: #00bfff;
   /* background: linear-gradient(145deg, #6ab3e7, #f18686); */
   color: white;
   transform: translateY(-10px);
@@ -95,18 +95,6 @@ img{
 .mtop {
   margin-top: 40px;
 }
-/* .heading {
-  margin: 50px 0 50px 0;
-}
-.heading h4 {
-  color:  #0184ff;
-  letter-spacing: 2px;
-  font-weight: 400;
-}
-.heading h1 {
-  font-size: 60px;
-  color: #3c3e41;
-} */
 h1 {
   color: #3c3e41;
 }
@@ -122,7 +110,7 @@ p {
   text-align: center;
 }
 .primary_color {
-  color:  #0184ff;
+  color: #00bfff;
 }
 span {
   font-weight:bold;
@@ -164,6 +152,6 @@ footer p {
     font-size: 2rem;;
   }
   p{
-    font-size: 13px;
+    font-size: 15px;
   }
 }

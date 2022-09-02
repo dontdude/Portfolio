@@ -17,13 +17,6 @@
   font-weight: bold;
   color: #3c3e41;
 }
-/* 
-.hero p {
-  color: #878e99;
-  font-size: 18px;
-  line-height: 30px;
-  margin-top: 30px;
-} */
 .hero_btn {
   margin-top: 10%;
 }
@@ -43,8 +36,8 @@
 
 .hero_btn button img {
   /* skills images  */
-  width: 25px;
-  height: 25px;
+  width: 23px;
+  height: 22px;
   vertical-align:top;
 }
 .hero .left {

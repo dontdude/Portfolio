@@ -3,22 +3,13 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 6rem auto;
+  margin: 4rem auto;
 }
 .abt-left{
-  /* for absolute positioning of background card */
-  /* position: relative; */
-  /* align content of this div to center */
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
   margin: 0 auto;
 }
 .abt-right{
   margin: 0 auto;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
   justify-content: center;
   width: 50%;
 }
@@ -26,25 +17,16 @@
   width: 400px;
   height: 400px;
 }
-/* .abt-card.bg{
-  position: absolute;
-  bottom: 50px;
-  left: 10px;
-  border-radius: 50%;
-  background: linear-gradient(145deg, #e5ebef, #eddede);
-  box-shadow: 4px 4px 8px #928e8e, -4px -4px 8px #ffffff;
-} */
 .abt-img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 10px;
 }
 .abt-right .btn_shadow {
   width: 160px;
 }
 .abt-sub{
-  color: rgb(20, 87, 220);
+  color: #00bfff;
   /* top and bottom  || left and right */
   margin: 20px 0px;
 }
@@ -86,95 +68,52 @@
   }
 }
 
-/* ---- Resume Part ----- */
-.Resume .heading h1 {
-  font-size: 20px;
+/* ---- timeline component ----- */
+.timeline { 
+  margin : 2rem 0.5rem;
 }
-.Resume .content {
-  max-width: 85%;
-  margin: auto;
+.timeline.title {
+  font-size: 15em;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
 }
-.Resume .box {
-  padding: 40px;
+
+ .timeline h3 {
+  padding-top: 0.25em;
 }
-.Resume hr {
-  margin: 30px 0 30px 0;
-  border: 1px solid #e3e9ed;
-  background-color: #e3e9ed;
+
+.timeline.vertical-timeline-element-content {
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
+    0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
+  padding: 1em 2em !important;
 }
-.Resume .rate .btn_shadow {
-  color: #ff014f;
-  padding: 15px 30px;
-  font-weight: bold;
-  transition: 0.5s;
+
+.timeline.date {
+  color: rgb(201, 251, 255);
 }
-.Resume p {
-  font-size: 18px;
-  transition: 0.5s;
+
+.timeline .description {
+  margin: 1em 0 1em 0;
+  font-size: 17px;
 }
-.Resume .box {
-  margin-bottom: 40px;
-  position: relative;
-}
-.Resume .btn_shadow:hover {
-  transform: translate(0);
-}
-.Resume .box:hover .btn_shadow {
-  background: #ff3a75;
-  box-shadow: none;
-  color: white;
-}
-.Resume .box:hover p {
-  color: white;
-}
-.Resume .content-section {
-  position: relative;
-}
-.Resume .left {
-  position: relative;
-}
-.Resume .left::after {
-  content: "";
-  position: absolute;
-  top: 6%;
-  left: 0;
-  height: 118vh;
-  width: 5px;
-  background: #d9dee2;
-  z-index: -2;
-}
-.Resume .box::after {
-  content: "";
-  position: absolute;
-  top: 13%;
-  left: -8%;
-  height: 5px;
-  width: 50px;
-  background: #d9dee2;
-}
-.Resume .box::before {
-  content: "";
-  position: absolute;
-  top: 11%;
-  left: -10%;
-  height: 10px;
-  width: 10px;
-  background: #fff;
-  border: 5px solid #d9dee2;
-  border-radius: 50%;
-  z-index: 5;
-  transition: 0.5s;
-}
-.Resume .box:hover.box:before {
-  background: #ff3a75;
-}
+
 @media (max-width: 768px) {
-  .Resume .d_flex {
-    flex-direction: column;
+  .timeline.vertical-timeline-element-date {
+    display: block !important;
+    float: none !important;
+    color: rgb(44, 44, 44);
+    margin-top: 1.5em;
   }
-  .Resume .left::after {
-    top: 14%;
-    height: 105vh;
-    left: 23px;
+  .timeline h3 {
+    font-size: 16px;
+  }
+  .timeline h5 {
+    font-size: 14px;
+  }
+  .timeline .date{
+    font-size: 12px;
+  }
+  .timeline .description {
+    font-size: 13px;
   }
 }

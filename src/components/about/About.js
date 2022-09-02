@@ -1,73 +1,87 @@
 import React from "react"
 import "./About.css"
-import ResumeApi from "./ResumeAPI"
-import Card from "./Card"
 import logo from "../assets/logo.png";
+
+//React Reveal
+import Fade from 'react-reveal/Fade';
+
+// Timeline Component
+import TimelineData from "./timelineAPI"
+import { ReactComponent as WorkIcon } from "../assets/work.svg";
+import { ReactComponent as SchoolIcon } from "../assets/school.svg";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+
+//TODO: Add resume link
 
 const Features = () => {
 
   const title_name = "< About me />"
+  const workIconStyles = { background: "#06D6A0" };
+  const schoolIconStyles = { background: "#f9c74f" };
 
   return (
     <>
       <section id='about'>
-        <div className="abt">
-          <div className="abt-left">
-            {/* <div className="abt-card bg"></div> */}
-            <div className="abt-card">
-              <img className='abt-img' src={logo} alt='Profile' />
+          <div className="abt">
+            <div className="abt-left">
+              {/* <div className="abt-card bg"></div> */}
+              <Fade left>
+                <div className="abt-card">
+                  <img className='abt-img img-shadow' src={logo} alt='Profile' />
+                </div>
+              </Fade>
             </div>
-          </div>
-          <div className="abt-right">
-            <h1 className="title">{title_name}</h1>
-              <p className="abt-sub">Create React App is great but I think NextJs is phenomenal.</p>
-              <p className="abt-desc"> &emsp; <span>Hey!</span>  My name is <span>Chandan Mishra</span>, and I’m a student pursuing bachelors in Computer Engineering at <span>Ajay Kumar Garg Engineering College</span>. I have a strong hold on <span>C++, ReactJs and REST APIs using NodeJs</span>. Currently I am working on my problem solving skills as well as building websites from scratch using <span>MERN Stack</span>. I'm very <span>passionate about building new things</span>, and my goal is to pursue this passion within the field of software engineering.</p>
-              <p className="abt-desc abt-con">&emsp;In conclusion, I am a <span>Tech Savvy</span> and my passion for technology is something which drives me to solve real world problems within a highly collaborative work environment.</p>
-              <div className="btn_shadow">
-                {/* download attribute in anchor tag, will download anything specified in href link and name it Chandan's Resume here */}
-                <a href={logo} download="Chandan's Resume"><span>Resume</span>
-                    {/* <i class="fas fa-chevron-right"></i> */}
-                    <i class="fas fa-arrow-down"></i>
-                </a>
+            <Fade right>
+              <div className="abt-right">
+                <h1 className="title">{title_name}</h1>
+                  <p className="abt-sub">&emsp; Create React App is great but I think NextJs is even greater.</p>
+                  <p className="abt-desc"> &emsp; <span>Hey!</span>  My name is <span>Chandan Mishra</span>, and I’m a student pursuing bachelors in Computer Engineering at <span>Ajay Kumar Garg Engineering College</span>. I have a strong hold on <span>C++, ReactJs and REST APIs using NodeJs</span>. Currently I am working on my problem solving skills as well as building websites from scratch using <span>MERN Stack</span>. I'm very <span>passionate about building new things</span>, and my goal is to pursue this passion within the field of software engineering.</p>
+                  <p className="abt-desc abt-con">&emsp;In conclusion, I am a <span>Tech Savvy</span> and my passion for technology is something which drives me to solve real world problems within a highly collaborative work environment.</p>
+                  <div className="btn_shadow">
+                    {/* download attribute in anchor tag, will download anything specified in href link and name it Chandan's Resume here */}
+                    <a href={logo} download="Chandan's Resume"><span>Resume</span>
+                        {/* <i class="fas fa-chevron-right"></i> */}
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                  </div>
               </div>
-            </div>
+            </Fade>
+          </div>
+        
+
+
+  {/*------------------------------ Timeline Component ------------------------------ */}
+        <div className='timeline'>
+          <h1 className="title">Timeline</h1>
+          <VerticalTimeline>
+            {TimelineData.map((element) => {
+              let isWorkIcon = element.icon === "work";
+
+              return (
+                <VerticalTimelineElement
+                  key={element.key}
+                  date={element.date}
+                  dateClassName="date"
+                  iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
+                  icon={isWorkIcon ? <WorkIcon /> : <SchoolIcon />}
+                >
+                  <h3 className="vertical-timeline-element-title">
+                    {element.title}
+                  </h3>
+                  <h5 className="vertical-timeline-element-subtitle">
+                    {element.location}
+                  </h5>
+                  <p className="description">{element.desc1}</p>
+                  <p className="description">{element.desc2}</p>
+                </VerticalTimelineElement>
+              );
+            })}
+          </VerticalTimeline>
         </div>
-
-         {/* Resume Part */}
-        {/* <div className="Resume">
-          <div className='container top'>
-
-            <div className='content-section mtop d_flex'>
-              <div className='left'>
-                <div className='heading'>
-                  <h2>{"< Education />"}</h2>
-                </div>
-
-                <div className='content'>
-                  {ResumeApi.map((val, id) => {
-                    if (val.category === "education") {
-                      return <Card key={id} title={val.title} year={val.year} rate={val.rate} desc={val.desc} />
-                    }
-                  })}
-
-                </div>
-              </div>
-              <div className='left'>
-                <div className='heading'>
-                  <h3>Experience</h3>
-                </div>
-
-                <div className='content'>
-                  {ResumeApi.map((val, index) => {
-                    if (val.category === "experience") {
-                      return <Card key={index} title={val.title} year={val.year} rate={val.rate} desc={val.desc} />
-                    }
-                  })}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
 
       </section>
     </>

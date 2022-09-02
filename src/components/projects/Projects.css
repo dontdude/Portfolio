@@ -29,37 +29,17 @@ div.card-btn {
     justify-content:space-between;
     align-items: center;
 }
-
-/* .Project .img {
-height: 300px;
-overflow: hidden;
-transition: 0.5s;
-} */
-/* .Project img {
-width: 100%;
-border-radius: 10px;
-transition: 0.5s;
-}
-.Project .box .img:hover img {
-transform: scale(1.2);
-} */
 .Prj .desc {
   margin-top: -30px;
   margin-bottom: 20px;
   font-size: 17px;
 }
-/* .Project .category span {
-color: #ff014f;
-font-size: 13px;
-letter-spacing: 2px;
-font-weight: 500;
-} */
 .Prj .arrow {
     position: absolute;
     right: 30px;
     top: 11%;
     transform: rotate(-45deg);
-    color: #ff014f;
+    color: #00bfff;
     opacity: 0;
     transition: 0.5s;
 }
@@ -72,7 +52,7 @@ font-weight: 500;
     padding-bottom: 30px;
 }
 .Prj .Prj-card:hover h2 {
-    color: #ff014f;
+    color: #00bfff;
 }
 .Prj .Prj-card:hover {
     color: black;
@@ -134,7 +114,7 @@ background-color: #ecf0f3;
 }
 .modal-text button {
 margin-right: 20px;
-color: #ff014f;
+color: #00bfff;
 }
 .modal-text span {
     font-weight: 700;

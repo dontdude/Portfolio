@@ -19,7 +19,7 @@ header ul li a {
    letter-spacing: 1px;
 }
 header ul li a:hover {
-    color:  #0184ff;
+    color:  #00bfff;
 }
 
 img {
@@ -40,7 +40,7 @@ header h2{
     transition: 0.3s all ease;
     cursor: pointer;
     height: fit-content;
-    color:  #0184ff;
+    color:  #00bfff;
 }
 .home-btn {
     /* creates an image consisting of a progressive transition between two or more colors along a straight line */
@@ -48,7 +48,7 @@ header h2{
     box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
 }
 .home-btn:hover {
-    background:  #0184ff;
+    background:  #00bfff;
     color: white;
 }
 /* On larger screen toggle button is not shown */
@@ -103,7 +103,7 @@ header h2{
         position: absolute;
         top: 35px;
         right: 20px;
-        color:  #0184ff;
+        color:  #00bfff;
         display: block;
         font-size: 25px;
         z-index: 999;
@@ -113,7 +113,7 @@ header h2{
     }
     .close.home-btn {
         background: linear-gradient(145deg, #e2e8ec, #ffffff);
-        color:  #0184ff;
+        color:  #00bfff;
         border-radius: 50%;
         padding: 0;
         width: 60px;

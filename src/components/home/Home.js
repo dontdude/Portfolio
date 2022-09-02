@@ -1,10 +1,16 @@
 import React from "react"
 import "./Home.css"
 import hero from "../assets/hero.png";
-import skill1 from "../assets/react.png"
-import skill2 from "../assets/c++.png"
-import skill3 from "../assets/nodejs.png"
+import cf from "../assets/cf.png"
+import cc from "../assets/cc.png"
+import lt from "../assets/lt.png"
+import gfg from "../assets/gfg.png"
 import { useTypewriter } from "react-simple-typewriter"
+
+//React reveal
+import Fade from 'react-reveal/Fade';
+
+// TODO: Add dark mode
 
 const Home = () => {
   
@@ -34,41 +40,54 @@ const Home = () => {
               <div className='col_1'>
                 <h4>FIND ME ON</h4>
                 <div className='button'>
-                  <button className='btn_shadow'>
-                    <i class='fab fa-linkedin-in'></i>
-                  </button>
-                  <button className='btn_shadow'>
-                    <i class='fab fa-instagram'></i>
-                  </button>
-                  <button className='btn_shadow'>
-                    <i class="fab fa-github"></i>
-                  </button>
-                </div>
+                  <a href='https://www.linkedin.com/in/chandan-mishra-b772231ba/'>
+                    <button className='btn_shadow'>
+                      <i class='fab fa-linkedin-in'></i>
+                    </button>
+                  </a>
+                  <a href='https://github.com/dontdude'>
+                    <button className='btn_shadow'>
+                      <i class="fab fa-github"></i>
+                    </button>
+                  </a>
+                {/* </div>
               </div>
               <div className='col_1'>
-                <h4>BEST SKILL ON</h4>
-                <button className='btn_shadow'>
-                  {/* <i class="fab fa-react"></i> */}
-                  <img src={skill1} alt='' />
-                </button>
-                <button className='btn_shadow'>
-                  {/* <i class="fab fa-cuttlefish">++</i> */}
-                  <img src={skill2} alt='' />
-                </button>
-                <button className='btn_shadow'>
-                  {/* <i class="fab fa-node-js"></i> */}
-                  <img src={skill3} alt='' />
-                </button>
+                <h4>BEST SKILL ON</h4> */}
+                <a href='https://codeforces.com/profile/dontDude'>
+                  <button className='btn_shadow'>
+                    <img src={cf} alt='' />
+                  </button>
+                </a>
+                <a href='https://www.codechef.com/users/dontdude'>
+                  <button className='btn_shadow'>
+                    <img src={cc} alt='' />
+                  </button>
+                </a>
+                <a href='https://auth.geeksforgeeks.org/user/dontdude/practice'>
+                  <button className='btn_shadow'>
+                    <img src={gfg} alt='' />
+                  </button>
+                </a>
+                <a href='https://leetcode.com/dontdude/'>
+                  <button className='btn_shadow'>
+                    <img src={lt} alt='' />
+                  </button>
+                </a>
+
+               </div>
               </div>
             </div>
           </div>
 
-          {/* image area */}
-          <div className='right'>
-            {/* <div className='right_img'> */}
-              <img src={hero} alt='' />
-            {/* </div> */}
-          </div>
+          <Fade right>
+            {/* image area */}
+            <div className='right'>
+              {/* <div className='right_img'> */}
+                <img className='img-shadow' src={hero} alt='' />
+              {/* </div> */}
+            </div>
+          </Fade>
         </div>
       </section>
     </>
