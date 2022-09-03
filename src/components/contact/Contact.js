@@ -3,10 +3,12 @@ import contact from "../assets/contact.png"
 import "./Contact.css"
 //React Reveal
 import Fade from 'react-reveal/Fade';
+// Email Js
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [data, setData] = useState({
-    fullname: "",
+    name: "",
     email: "",
     message: "",})
 
@@ -23,14 +25,24 @@ const Contact = () => {
 
   const title_name = "< Contact Me />";
 
-   // TODO: Add Email.JS to send the form details to email 
+   // Added Email.JS to send the form details to email 
   const formSubmit = (event) => {
     event.preventDefault()
     alert(
-      `Name : ${data.fullname}
+      `Name : ${data.name}
 	   Email : ${data.email}
-	   Message : ${data.message}`
+	   Message : ${data.message}`,
     )
+    emailjs.sendForm('service_aonqi4q', 'template_y572oei', event.target, 'kT0FQGetZcI5jNFu4')
+      .then((result) => {
+          console.log(result.text);
+          alert('Thanks for contacting me, Message Successfully sent.');
+      }, (error) => {
+          console.log(error.text);
+          alert('Sorry! There was some error while sending message right now, use other provided method to contact me.');
+      });
+
+      event.target.reset();
   }
 
  
@@ -71,7 +83,7 @@ const Contact = () => {
                 <form onSubmit={formSubmit}>
                     <div className='input'>
                       <span>YOUR NAME</span>
-                      <input type='text' name='fullname' value={data.fullname} onChange={InputEvent} />
+                      <input type='text' name='name' value={data.name} onChange={InputEvent} />
                     </div>
                     <div className='input'>
                       <span>EMAIL </span>

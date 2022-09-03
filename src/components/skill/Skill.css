@@ -25,7 +25,7 @@
     box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
 }
 .skl-card:hover {
-    background: linear-gradient(145deg, rgb(216, 235, 241), #f6f5f5);
+    background: none;
     transform: translateY(-10px);
     transition: 0.5s;
 }
