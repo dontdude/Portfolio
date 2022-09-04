@@ -25,6 +25,7 @@ const Projects = () => {
                         clone={project.clone_url} 
                         fork={project.forks}
                         lang={project.language}
+                        hostedUrl={project.homepage}
                         />
               })}
             </div>

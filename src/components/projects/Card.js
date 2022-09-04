@@ -30,18 +30,25 @@ const Card = (props) => {
   }
 
   return (
+
     <>
       <Zoom bottom>
         <div className='Prj-card btn_shadow '>
           <div className='card-title'>
-            <h2 onClick={toggleModal}>{props.title}</h2>
+            {/* <h2 onClick={toggleModal}>{props.title}</h2> */}
+            <a href={props.hostedUrl}><h2>{props.title}</h2></a>
             <a href='#popup' className='arrow' onClick={toggleModal}>
               <i class='fas fa-arrow-right'></i>
             </a>
           </div>
           <div className="desc">
               <p>{props.details}</p>
+              {props.hostedUrl === '' || props.hostedUrl === null ?
+                ('') :
+                (<p className="desc-sml"><span>Hosted:</span> <a href={props.hostedUrl}>{props.hostedUrl}</a></p>)
+              }
           </div>
+
           <hr />
   
           {/* <div className='d_flex'>
@@ -69,13 +76,24 @@ const Card = (props) => {
               <p>Project-Card</p>
               <h1>{props.title}</h1>
               <p>{props.details}</p>
-              <p>The project hosted link is available at the GitHub repository Readme, please head over there to view project.</p>
+
+              {props.hostedUrl === '' || props.hostedUrl === null ?
+                ('') :
+                (<p><span>Hosted Link :</span> <a href={props.hostedUrl}>{props.hostedUrl}</a></p>)
+              }
+              {/* <p>The project hosted link is available at the GitHub repository Readme, please head over there to view project.</p> */}
               <p><span>Pushed on :</span> {getday()}</p>
               <p><span>Language :</span> {props.lang}</p>
               <p> <span>Stars</span> : {props.stars} &emsp;  &emsp; <span>Forks</span> : {props.fork}</p>
-              <div className='button f_flex mtop'>
+              <div className='button f_flex mtop card-btn'>
+                {props.hostedUrl === '' || props.hostedUrl === null ?
+                  ('') :
+                  (<a href={props.hostedUrl} className='btn_shadow dtl-btn'>
+                    <i class='fas fa-chevron-right'></i> View Project
+                  </a>)
+                }
                 <a href={props.link} className='btn_shadow dtl-btn'>
-                  <i class='fas fa-chevron-right'></i> View Project
+                   <i class="fab fa-github"></i> Repository
                 </a>
               </div>
               <button className='close-modal btn_shadow' onClick={toggleModal}>

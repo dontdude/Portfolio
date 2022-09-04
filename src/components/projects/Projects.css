@@ -34,6 +34,18 @@ div.card-btn {
   margin-bottom: 20px;
   font-size: 17px;
 }
+
+.Prj .desc-sml{
+    margin-top: 8px;
+    font-size: 14px;
+}
+.Prj .desc-sml span{
+    margin-left: 0px;
+}
+.Prj .desc-sml a{
+    color: #1f73f0;
+}
+
 .Prj .arrow {
     position: absolute;
     right: 30px;
@@ -116,6 +128,11 @@ background-color: #ecf0f3;
 margin-right: 20px;
 color: #00bfff;
 }
+
+.modal a{
+    color: #1f73f0;
+}
+
 .modal-text span {
     font-weight: 700;
 }
