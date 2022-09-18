@@ -66,10 +66,10 @@ const Contact = () => {
                     <p><span>Email</span> : imchandan1947@gmail.com</p>
                     <p><span>Address</span> : Khora Colony, Noida, Uttar Pradesh, India</p> <br />
                     <div className="card-btn">
-                        <a className="btn_shadow" href="https://t.me/dd215412">
+                        <a target="_blank" rel="noopener noreferrer" className="btn_shadow" href="https://t.me/dd215412">
                            Chat <i class="fas fa-paper-plane"></i>
                         </a>
-                        <a className="btn_shadow" href="mailto:imchandan1947@gmail.com">
+                        <a target="_blank" rel="noopener noreferrer" className="btn_shadow" href="mailto:imchandan1947@gmail.com">
                            Mail <i class="fas fa-envelope"></i>
                         </a>
                     </div>

@@ -36,8 +36,8 @@ const Card = (props) => {
         <div className='Prj-card btn_shadow '>
           <div className='card-title'>
             {/* <h2 onClick={toggleModal}>{props.title}</h2> */}
-            <a href={props.hostedUrl}><h2>{props.title}</h2></a>
-            <a href='#popup' className='arrow' onClick={toggleModal}>
+            <a target="_blank" rel="noopener noreferrer" href={props.hostedUrl}><h2>{props.title}</h2></a>
+            <a target="_blank" rel="noopener noreferrer" href='#popup' className='arrow' onClick={toggleModal}>
               <i class='fas fa-arrow-right'></i>
             </a>
           </div>
@@ -45,7 +45,7 @@ const Card = (props) => {
               <p>{props.details}</p>
               {props.hostedUrl === '' || props.hostedUrl === null ?
                 ('') :
-                (<p className="desc-sml"><span>Hosted:</span> <a href={props.hostedUrl}>{props.hostedUrl}</a></p>)
+                (<p className="desc-sml"><span>Hosted:</span> <a target="_blank" rel="noopener noreferrer" href={props.hostedUrl}>{props.hostedUrl}</a></p>)
               }
           </div>
 
@@ -57,7 +57,7 @@ const Card = (props) => {
           </div> */}
   
           <div className="card-btn">
-            <a className='btn_shadow' href={props.link}>
+            <a className='btn_shadow' target="_blank" rel="noopener noreferrer"  href={props.link}>
               <i class="fab fa-github"></i> Repo
             </a>
             <button className='btn_shadow dtl-btn' onClick={toggleModal}>
@@ -79,7 +79,7 @@ const Card = (props) => {
 
               {props.hostedUrl === '' || props.hostedUrl === null ?
                 ('') :
-                (<p><span>Hosted Link :</span> <a href={props.hostedUrl}>{props.hostedUrl}</a></p>)
+                (<p><span>Hosted Link :</span> <a target="_blank" rel="noopener noreferrer"  href={props.hostedUrl}>{props.hostedUrl}</a></p>)
               }
               {/* <p>The project hosted link is available at the GitHub repository Readme, please head over there to view project.</p> */}
               <p><span>Pushed on :</span> {getday()}</p>
@@ -88,11 +88,11 @@ const Card = (props) => {
               <div className='button f_flex mtop card-btn'>
                 {props.hostedUrl === '' || props.hostedUrl === null ?
                   ('') :
-                  (<a href={props.hostedUrl} className='btn_shadow dtl-btn'>
+                  (<a target="_blank" rel="noopener noreferrer" href={props.hostedUrl} className='btn_shadow dtl-btn'>
                     <i class='fas fa-chevron-right'></i> View Project
                   </a>)
                 }
-                <a href={props.link} className='btn_shadow dtl-btn'>
+                <a target="_blank" rel="noopener noreferrer" href={props.link} className='btn_shadow dtl-btn'>
                    <i class="fab fa-github"></i> Repository
                 </a>
               </div>

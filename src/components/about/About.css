@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 4rem auto;
+  margin: 2rem auto;
 }
 .abt-left{
   margin: 0 auto;
@@ -11,7 +11,7 @@
 .abt-right{
   margin: 0 auto;
   justify-content: center;
-  width: 50%;
+  width: 55%;
 }
 .abt-card {
   width: 400px;
@@ -21,6 +21,7 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
+  padding: 0.5rem;
 }
 .abt-right .btn_shadow {
   width: 160px;
@@ -34,7 +35,21 @@
   font-weight: 300;
   margin: 10px auto;
 }
+.abt-right .btn_shadow{
+  margin-top: 2rem;
+  width: 8.5rem;
+}
+.abt-right p {
+  font-size: 21px;
+}
 
+.abt .rsm{
+  font-size: 1.3rem;
+}
+
+#about .title {
+  margin-top: 3rem;
+}
 
 @media (max-width: 768px) {
   .abt{
@@ -54,8 +69,11 @@
     text-align: center;
   }
   .abt-right .btn_shadow {
-    width: 160px;
+    width: 7.6rem;
     margin: 2rem auto;
+  }
+  .abt .rsm{
+    font-size: 1.1rem;
   }
   .abt-con{
     display: none;
@@ -70,7 +88,7 @@
 
 /* ---- timeline component ----- */
 .timeline { 
-  margin : 2rem 0.5rem;
+  margin : 5rem 0.5rem;
 }
 .timeline.title {
   font-size: 15em;

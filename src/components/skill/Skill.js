@@ -1,8 +1,8 @@
 import React from 'react';
 import './Skill.css';
-import frontend from "../assets/frontend.png";
-import backend from "../assets/backend.png";
-import general from "../assets/general.png";
+import frontend from "../assets/frontend.jpg";
+import backend from "../assets/backend.jpg";
+import general from "../assets/general.jpg";
 
 import Fade from 'react-reveal/Fade';
 

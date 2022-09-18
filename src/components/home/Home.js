@@ -40,12 +40,12 @@ const Home = () => {
               <div className='col_1'>
                 <h4>FIND ME ON</h4>
                 <div className='button'>
-                  <a href='https://www.linkedin.com/in/chandan-mishra-b772231ba/'>
+                  <a target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/chandan-mishra-b772231ba/'>
                     <button className='btn_shadow'>
                       <i class='fab fa-linkedin-in'></i>
                     </button>
                   </a>
-                  <a href='https://github.com/dontdude'>
+                  <a target="_blank" rel="noopener noreferrer" href='https://github.com/dontdude'>
                     <button className='btn_shadow'>
                       <i class="fab fa-github"></i>
                     </button>
@@ -54,22 +54,22 @@ const Home = () => {
               </div>
               <div className='col_1'>
                 <h4>BEST SKILL ON</h4> */}
-                <a href='https://codeforces.com/profile/dontDude'>
+                <a target="_blank" rel="noopener noreferrer" href='https://codeforces.com/profile/dontDude'>
                   <button className='btn_shadow'>
                     <img src={cf} alt='' />
                   </button>
                 </a>
-                <a href='https://www.codechef.com/users/dontdude'>
+                <a target="_blank" rel="noopener noreferrer" href='https://www.codechef.com/users/dontdude'>
                   <button className='btn_shadow'>
                     <img src={cc} alt='' />
                   </button>
                 </a>
-                <a href='https://auth.geeksforgeeks.org/user/dontdude/practice'>
+                <a target="_blank" rel="noopener noreferrer" href='https://auth.geeksforgeeks.org/user/dontdude/practice'>
                   <button className='btn_shadow'>
                     <img src={gfg} alt='' />
                   </button>
                 </a>
-                <a href='https://leetcode.com/dontdude/'>
+                <a target="_blank" rel="noopener noreferrer" href='https://leetcode.com/dontdude/'>
                   <button className='btn_shadow'>
                     <img src={lt} alt='' />
                   </button>

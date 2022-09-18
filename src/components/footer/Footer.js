@@ -1,14 +1,14 @@
 import React from "react"
-import logo from "../assets/logo.png"
+import logo from "../assets/logo.jpg"
 
 const Footer = () => {
   return (
     <>
       <footer>
         <div className='conatiner text-center top'>
-          <div className='img'>
+          {/* <div className='img'>
             <img src={logo} alt='' />
-          </div>
+          </div> */}
           <p>© 2022. All rights reserved by dontDude.</p>
         </div>
       </footer>

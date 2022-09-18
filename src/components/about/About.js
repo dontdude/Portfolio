@@ -1,6 +1,7 @@
 import React from "react"
 import "./About.css"
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.jpg";
+import Resume from "../assets/Resume_ChandanMishra.pdf";
 
 //React Reveal
 import Fade from 'react-reveal/Fade';
@@ -26,27 +27,31 @@ const Features = () => {
   return (
     <>
       <section id='about'>
+        <h1 className="title">{title_name}</h1>
           <div className="abt">
             <div className="abt-left">
               {/* <div className="abt-card bg"></div> */}
               <Fade left>
                 <div className="abt-card">
-                  <img className='abt-img img-shadow' src={logo} alt='Profile' />
+                  <img className='abt-img img-shadow circle' src={logo} alt='Profile' />
                 </div>
               </Fade>
             </div>
             <Fade right>
               <div className="abt-right">
-                <h1 className="title">{title_name}</h1>
-                  <p className="abt-sub">&emsp; Create React App is great but I think NextJs is even greater.</p>
+                {/* <h1 className="title">{title_name}</h1> */}
+                  <p className="abt-sub">&emsp; Create React App is great, but I think NextJs is the "New Standard".</p>
                   <p className="abt-desc"> &emsp; <span>Hey!</span>  My name is <span>Chandan Mishra</span>, and I’m a student pursuing bachelors in Computer Engineering at <span>Ajay Kumar Garg Engineering College</span>. I have a strong hold on <span>C++, ReactJs and REST APIs using NodeJs</span>. Currently I am working on my problem solving skills as well as building websites from scratch using <span>MERN Stack</span>. I'm very <span>passionate about building new things</span>, and my goal is to pursue this passion within the field of software engineering.</p>
                   <p className="abt-desc abt-con">&emsp;In conclusion, I am a <span>Tech Savvy</span> and my passion for technology is something which drives me to solve real world problems within a highly collaborative work environment.</p>
-                  <div className="btn_shadow">
+                  <div className="rsm btn_shadow">
                     {/* download attribute in anchor tag, will download anything specified in href link and name it Chandan's Resume here */}
-                    <a href={logo} download="Chandan's Resume"><span>Resume</span>
-                        {/* <i class="fas fa-chevron-right"></i> */}
+                    {/* <a href={Resume} download="Resume_ChandanMishra"><b>Resume</b>
                         <i class="fas fa-arrow-down"></i>
+                    </a> */}
+                    <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/18EyEKgYZKMGiDXjj5WYPWN-JJj1C8VUK/view"><b>Resume&nbsp;</b>
+                        <i class="fas fa-chevron-right"></i>
                     </a>
+                    {/* target="_blank" rel="noopener noreferrer"       to open links in new tab */}
                   </div>
               </div>
             </Fade>
