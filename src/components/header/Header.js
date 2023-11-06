@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./Header.css";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 
 const Header = () => {
 
@@ -34,7 +34,7 @@ const Header = () => {
        </div>
 
        <div className="navlink">
-          {/* different class on mobile screen so different styles */}
+          {/* link tag is responsible for no appearance of nav link on small screen initially */}
           <ul className={ismobile ? "nav-links-mobile" : "link f_flex uppercase"}>
             <li><a href="#home">HOME</a></li>
             <li><a href="#about">ABOUT ME</a></li>

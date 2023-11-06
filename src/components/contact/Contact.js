@@ -61,15 +61,15 @@ const Contact = () => {
                   </div>
                   <div className='details'>
                    <h1>Get In Touch!</h1>
-                    <p>I am available for full time roles in Software development and web development. If you think you have any project/work that matches my skill set, or if you just want to say hi, you can contact me with the following details.</p> <br />
-                    <p><span>Phone</span> : +91 7011125038</p>
-                    <p><span>Email</span> : imchandan1947@gmail.com</p>
-                    <p><span>Address</span> : Khora Colony, Noida, Uttar Pradesh, India</p> <br />
+                    <p>I am available for full time roles in Software Engineering or Full-Stack Development. If you think you have any project/work that matches my skill set, or if you just want to say hi, you can contact me with the following details.</p> <br />
+                    <p><span>Phone</span>: +91 7011125038</p>
+                    <p><span>Email</span>: mishrachandan.dd@gmail.com</p>
+                    <p><span>Address</span>: Noida, Uttar Pradesh, India</p> <br />
                     <div className="card-btn">
                         <a target="_blank" rel="noopener noreferrer" className="btn_shadow" href="https://t.me/dd215412">
                            Chat <i class="fas fa-paper-plane"></i>
                         </a>
-                        <a target="_blank" rel="noopener noreferrer" className="btn_shadow" href="mailto:imchandan1947@gmail.com">
+                        <a target="_blank" rel="noopener noreferrer" className="btn_shadow" href="mailto:mishrachandan.dd@gmail.com">
                            Mail <i class="fas fa-envelope"></i>
                         </a>
                     </div>
@@ -86,7 +86,7 @@ const Contact = () => {
                       <input type='text' name='name' value={data.name} onChange={InputEvent} />
                     </div>
                     <div className='input'>
-                      <span>EMAIL </span>
+                      <span>YOUR EMAIL </span>
                       <input type='email' name='email' value={data.email} onChange={InputEvent} />
                     </div>
                   <div className='input'>

@@ -94,6 +94,8 @@ header h2{
         text-transform: uppercase;
         line-height: 70px;
     }
+     
+    /* Reason why nav link won't appear on small screen initially */
     header .link {
         display: none;
     }

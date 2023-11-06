@@ -1,7 +1,7 @@
 import React from "react"
 import "./About.css"
-import logo from "../assets/logo.jpg";
-import Resume from "../assets/Resume_ChandanMishra.pdf";
+import logo from "../assets/logo.png";
+//import Resume from "../assets/Resume_ChandanMishra.pdf";
 
 //React Reveal
 import Fade from 'react-reveal/Fade';
@@ -40,19 +40,27 @@ const Features = () => {
             <Fade right>
               <div className="abt-right">
                 {/* <h1 className="title">{title_name}</h1> */}
-                  <p className="abt-sub">&emsp; Create React App is great, but I think NextJs is the "New Standard".</p>
-                  <p className="abt-desc"> &emsp; <span>Hey!</span>  My name is <span>Chandan Mishra</span>, and I’m a student pursuing bachelors in Computer Engineering at <span>Ajay Kumar Garg Engineering College</span>. I have a strong hold on <span>C++, ReactJs and REST APIs using NodeJs</span>. Currently I am working on my problem solving skills as well as building websites from scratch using <span>MERN Stack</span>. I'm very <span>passionate about building new things</span>, and my goal is to pursue this passion within the field of software engineering.</p>
-                  <p className="abt-desc abt-con">&emsp;In conclusion, I am a <span>Tech Savvy</span> and my passion for technology is something which drives me to solve real world problems within a highly collaborative work environment.</p>
-                  <div className="rsm btn_shadow">
-                    {/* download attribute in anchor tag, will download anything specified in href link and name it Chandan's Resume here */}
-                    {/* <a href={Resume} download="Resume_ChandanMishra"><b>Resume</b>
-                        <i class="fas fa-arrow-down"></i>
-                    </a> */}
-                    <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/18EyEKgYZKMGiDXjj5WYPWN-JJj1C8VUK/view"><b>Resume&nbsp;</b>
-                        <i class="fas fa-chevron-right"></i>
-                    </a>
-                    {/* target="_blank" rel="noopener noreferrer"       to open links in new tab */}
-                  </div>
+                {/* <p className="abt-sub">&emsp; My code's so clean, it makes whitespace jealous. 🧹</p> */}
+                <p className="abt-sub">&emsp; I speak fluent JavaScript, and my favorite word is 'function'. </p>
+                <p className="abt-desc">
+                  &emsp; As a software alchemist, I engineer digital products with an emphasis on <span>aesthetics, lightning-fast performance, and an impeccably seamless user experience</span>. Adept at algorithm driven development, I sculpt high-performance code with analytical precision. I'm the team's secret weapon, tackling complex projects with a blend of unwavering problem-solving and a fervent commitment to staying at the forefront of technology trends.
+                </p>
+                <p className="abt-desc">
+                  &emsp; Seeking to enrich your team with a dynamic, code-sorcerer? <a href="mailto:mishrachandan.dd@gmail.com" style={{ color: "#00bfff", textDecoration: "underline" }}>Hire Me <sup><i class="fas fa-external-link-alt fa-xs"></i></sup></a> and let's transform challenges into triumphs. 
+                </p>
+
+                {/* download attribute in anchor tag, will download anything specified in href link and name it Chandan's Resume here
+                <a href={Resume} download="Resume_ChandanMishra"><b>Resume</b>
+                    <i class="fas fa-arrow-down"></i>
+                </a> */}
+                <div style={{display: "flex", justifyContent: "center"}}>
+                  <a style={{display: "inline-block"}} target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/18u4UhLYn38znZ9IFQMm9KvIx4FfmZ7YA/view?usp=drivesdk">
+                    <div className="rsm btn_shadow">
+                      <b>Resume&nbsp;</b>
+                      <i className="fas fa-chevron-right"></i>
+                    </div>
+                  </a>
+                </div>
               </div>
             </Fade>
           </div>
@@ -75,7 +83,13 @@ const Features = () => {
                   icon={isWorkIcon ? <WorkIcon /> : <SchoolIcon />}
                 >
                   <h3 className="vertical-timeline-element-title">
-                    {element.title}
+                    {element.link ? (
+                      <a href={element.link} style={{ color: "#00bfff" }}>
+                        {element.title} <sup><i className="fas fa-external-link-alt fa-xs"></i></sup>
+                      </a>
+                    ) : (
+                      element.title
+                    )}
                   </h3>
                   <h5 className="vertical-timeline-element-subtitle">
                     {element.location}

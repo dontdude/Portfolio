@@ -1,14 +1,12 @@
 import React from "react"
 import "./Home.css"
-import hero from "../assets/hero.png";
 import cf from "../assets/cf.png"
-import cc from "../assets/cc.png"
 import lt from "../assets/lt.png"
 import gfg from "../assets/gfg.png"
 import { useTypewriter } from "react-simple-typewriter"
 
 //React reveal
-import Fade from 'react-reveal/Fade';
+//import Fade from 'react-reveal/Fade';
 
 // TODO: Add dark mode
 
@@ -16,7 +14,7 @@ const Home = () => {
   
   // typewriter bug fix using typewriter hook : typed only one word
   const {text} = useTypewriter({
-    words: [' Competitive Programmer.', ' Full-Stack developer.', ],
+    words: [' Full-stack Engineer.', ' Software Developer.', ' Competitive Programmer.'],
     loop: 0,
     onLoopDone: () => console.log(`loop completed after 3 runs.`),
   })
@@ -29,7 +27,7 @@ const Home = () => {
           {/* left area */}
           <div className='left top'>
             <h1>
-              Hi, I’m <span>Chandan Mishra</span>
+              Hey👋, I’m <span>Chandan Mishra👨🏻‍💻</span>
             </h1>
             <h2>
               a 
@@ -54,14 +52,14 @@ const Home = () => {
               </div>
               <div className='col_1'>
                 <h4>BEST SKILL ON</h4> */}
+                <a target="_blank" rel="noopener noreferrer" href='https://medium.com/@imchandan1947'>
+                  <button className='btn_shadow'>
+                    <i class="fab fa-medium"></i>
+                  </button>
+                </a>
                 <a target="_blank" rel="noopener noreferrer" href='https://codeforces.com/profile/dontDude'>
                   <button className='btn_shadow'>
                     <img src={cf} alt='' />
-                  </button>
-                </a>
-                <a target="_blank" rel="noopener noreferrer" href='https://www.codechef.com/users/dontdude'>
-                  <button className='btn_shadow'>
-                    <img src={cc} alt='' />
                   </button>
                 </a>
                 <a target="_blank" rel="noopener noreferrer" href='https://auth.geeksforgeeks.org/user/dontdude/practice'>
@@ -80,14 +78,12 @@ const Home = () => {
             </div>
           </div>
 
-          <Fade right>
-            {/* image area */}
+          {/* Right area */}
+          {/* <Fade right>
             <div className='right'>
-              {/* <div className='right_img'> */}
                 <img className='img-shadow' src={hero} alt='' />
-              {/* </div> */}
             </div>
-          </Fade>
+          </Fade> */}
         </div>
       </section>
     </>

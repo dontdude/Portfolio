@@ -132,14 +132,6 @@ hr {
   height: 1px;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(119, 124, 155, 0.75), rgba(255, 255, 255, 0));
 }
-/*----------Footer---------*/
-footer {
-  margin: 20% 0 10% 0;
-}
-footer p {
-  margin-top: 30px;
-}
-/*----------Footer---------*/
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);

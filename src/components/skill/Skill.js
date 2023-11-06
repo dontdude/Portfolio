@@ -24,10 +24,10 @@ const Skill = () => {
                     <h2 className="card-title">frontend</h2>
                     <ul>
                       <li>HTML / CSS</li>
-                      <li>JavaScript</li>
-                      <li>React</li>
-                      <li>NextJs</li>
+                      <li>React.js / Next.js 13</li>
+                      <li>Vue.js</li>
                       <li>Tailwind Css</li>
+                      <li>Redux / Context API</li>
                       {/* <li>BootsTrap</li> */}
                     </ul>
               </div>
@@ -37,11 +37,12 @@ const Skill = () => {
                     <img className='img-shadow' src={backend} alt='Backend' />
                     <h2 className="card-title">Backend</h2>
                     <ul>
-                      <li>NodeJs / ExpressJs</li>
-                      <li>MongoDB</li>
-                      <li>Firebase</li>
-                      <li>OAuth</li>
-                      <li>REST APIs</li>
+                      <li>NodeJs</li>
+                      <li>ExpressJs</li>
+                      <li>JEST Testing</li>
+                      <li>AWS</li>
+                      <li>Postman API platform</li>
+                      {/* <li>REST APIs</li> */}
                       {/* <li>AWS</li> */}
                       {/* <li>MySQL</li> */}
                     </ul>
@@ -52,11 +53,11 @@ const Skill = () => {
                     <img className='img-shadow' src={general} alt='General' />
                     <h2 className="card-title">General</h2>
                     <ul>
-                      <li>C/C++</li>
+                      <li>JavaScript / TypeScript</li>
+                      <li>C / C++</li>
                       <li>Data Structures & Algorithms</li>
-                      <li>Competitive Programming</li>
+                      <li>MongoDB / MySQL</li>
                       <li>Git / GitHub</li>
-                      <li>Heroku / Netlify / Vercel</li>
                       {/* <li>Docker</li> */}
                       {/* <li>VS Code</li>
                       <li>Linux</li> */}

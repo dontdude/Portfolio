@@ -24,7 +24,7 @@
   padding: 0.5rem;
 }
 .abt-right .btn_shadow {
-  width: 160px;
+  width: 130px;
 }
 .abt-sub{
   color: #00bfff;
@@ -37,14 +37,14 @@
 }
 .abt-right .btn_shadow{
   margin-top: 2rem;
-  width: 8.5rem;
+  width: 7.5rem;
 }
 .abt-right p {
   font-size: 21px;
 }
 
 .abt .rsm{
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 #about .title {
@@ -69,11 +69,11 @@
     text-align: center;
   }
   .abt-right .btn_shadow {
-    width: 7.6rem;
+    width: 6rem;
     margin: 2rem auto;
   }
   .abt .rsm{
-    font-size: 1.1rem;
+    font-size: 0.8rem;
   }
   .abt-con{
     display: none;

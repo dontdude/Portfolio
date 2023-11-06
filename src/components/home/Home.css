@@ -1,7 +1,10 @@
 .hero {
   /* position: relative; */
-  margin-bottom: 4rem;
-  margin-left: 10px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .hero h1 {
   font-size: 60px;
@@ -36,18 +39,18 @@
 
 .hero_btn button img {
   /* skills images  */
-  width: 23px;
+  width: 20px;
   height: 22px;
   vertical-align:top;
 }
 .hero .left {
-  margin-right: 10%;
+  width: 900px
 }
-.hero .right {
+/* .hero .right {
   width: 30%;
   display: flex;
   justify-content: center;
-}
+} */
 .hero .right_img {
   background: linear-gradient(145deg, #e2e8ec, #ffffff);
   box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
