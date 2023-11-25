@@ -54,7 +54,7 @@ const Features = () => {
                     <i class="fas fa-arrow-down"></i>
                 </a> */}
                 <div style={{display: "flex", justifyContent: "center"}}>
-                  <a style={{display: "inline-block"}} target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/18u4UhLYn38znZ9IFQMm9KvIx4FfmZ7YA/view?usp=drivesdk">
+                  <a style={{display: "inline-block"}} target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1ZmxTJeJcCtQXqD6_N9JPO26j6J6ZscGX/view?usp=drivesdk">
                     <div className="rsm btn_shadow">
                       <b>Resume&nbsp;</b>
                       <i className="fas fa-chevron-right"></i>

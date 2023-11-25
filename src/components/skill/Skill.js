@@ -26,8 +26,9 @@ const Skill = () => {
                       <li>HTML / CSS</li>
                       <li>React.js / Next.js 13</li>
                       <li>Vue.js</li>
+                      <li>Angular</li>
                       <li>Tailwind Css</li>
-                      <li>Redux / Context API</li>
+                      {/* <li>Redux / Context API</li> */}
                       {/* <li>BootsTrap</li> */}
                     </ul>
               </div>
@@ -41,10 +42,8 @@ const Skill = () => {
                       <li>ExpressJs</li>
                       <li>JEST Testing</li>
                       <li>AWS</li>
-                      <li>Postman API platform</li>
+                      <li>Docker</li>
                       {/* <li>REST APIs</li> */}
-                      {/* <li>AWS</li> */}
-                      {/* <li>MySQL</li> */}
                     </ul>
               </div>
            </Fade>
