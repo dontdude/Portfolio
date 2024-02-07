@@ -23,11 +23,11 @@ const Skill = () => {
                     <img className='img-shadow' src={frontend} alt='Frontend' />
                     <h2 className="card-title">frontend</h2>
                     <ul>
-                      <li>HTML / CSS</li>
-                      <li>React.js / Next.js 13</li>
-                      <li>Vue.js</li>
-                      <li>Angular</li>
-                      <li>Tailwind Css</li>
+                      <li>React, Next JS, Redux</li>
+                      <li>Vue, Vuex</li>
+                      <li>Angular, RxJS</li>
+                      <li>HTML, CSS, SASS, Tailwind CSS</li>
+                      <li>Figma, Canva</li>
                       {/* <li>Redux / Context API</li> */}
                       {/* <li>BootsTrap</li> */}
                     </ul>
@@ -38,11 +38,11 @@ const Skill = () => {
                     <img className='img-shadow' src={backend} alt='Backend' />
                     <h2 className="card-title">Backend</h2>
                     <ul>
-                      <li>NodeJs</li>
-                      <li>ExpressJs</li>
-                      <li>JEST Testing</li>
-                      <li>AWS</li>
-                      <li>Docker</li>
+                      <li>Node, Express</li>
+                      <li>SQL and NoSQL Databases</li>
+                      <li>REST, GraphQL</li>
+                      <li>Docker, Vercel, AWS, Firebase</li>
+                      <li>Postman, FastAPI</li>
                       {/* <li>REST APIs</li> */}
                     </ul>
               </div>
@@ -55,9 +55,8 @@ const Skill = () => {
                       <li>JavaScript / TypeScript</li>
                       <li>C / C++</li>
                       <li>Data Structures & Algorithms</li>
-                      <li>MongoDB / MySQL</li>
-                      <li>Git / GitHub</li>
-                      {/* <li>Docker</li> */}
+                      <li>Git, GitHub, Jira</li>
+                      <li>GenAI, HuggingFace, Langchain</li>
                       {/* <li>VS Code</li>
                       <li>Linux</li> */}
                     </ul>

@@ -1,7 +1,7 @@
 import React from "react"
 import "./About.css"
 import logo from "../assets/logo.png";
-//import Resume from "../assets/Resume_ChandanMishra.pdf";
+import Resume from "../assets/Resume_ChandanMishra.pdf";
 
 //React Reveal
 import Fade from 'react-reveal/Fade';
@@ -54,10 +54,16 @@ const Features = () => {
                     <i class="fas fa-arrow-down"></i>
                 </a> */}
                 <div style={{display: "flex", justifyContent: "center"}}>
-                  <a style={{display: "inline-block"}} target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1ZmxTJeJcCtQXqD6_N9JPO26j6J6ZscGX/view?usp=drivesdk">
+                  {/* <a style={{display: "inline-block"}} target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1ZmxTJeJcCtQXqD6_N9JPO26j6J6ZscGX/view?usp=drivesdk">
                     <div className="rsm btn_shadow">
                       <b>Resume&nbsp;</b>
                       <i className="fas fa-chevron-right"></i>
+                    </div>
+                  </a> */}
+                  <a style={{display: "inline-block"}} href={Resume} download="Resume_ChandanMishra">
+                    <div className="rsm btn_shadow">
+                      <b>Resume&nbsp;</b>
+                      <i className="fas fa-chevron-down"></i>
                     </div>
                   </a>
                 </div>
@@ -96,6 +102,7 @@ const Features = () => {
                   </h5>
                   <p className="description">{element.desc1}</p>
                   <p className="description">{element.desc2}</p>
+                  <p className="description">{element.desc3}</p>
                 </VerticalTimelineElement>
               );
             })}
