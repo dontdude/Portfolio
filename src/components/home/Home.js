@@ -38,7 +38,7 @@ const Home = () => {
               <div className='col_1'>
                 <h4>FIND ME ON</h4>
                 <div className='button'>
-                  <a target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/chandan-dontdude/s'>
+                  <a target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/chandan-dontdude/'>
                     <button className='btn_shadow'>
                       <i class='fab fa-linkedin-in'></i>
                     </button>
