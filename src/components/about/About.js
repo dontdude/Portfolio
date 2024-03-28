@@ -1,7 +1,8 @@
 import React from "react"
 import "./About.css"
 import logo from "../assets/logo.png";
-import Resume from "../assets/Resume_ChandanMishra.pdf";
+//import Resume from "../assets/Resume_ChandanMishra.pdf";
+import Resume from "../assets/ChandanMishra_Resume.pdf";
 
 //React Reveal
 import Fade from 'react-reveal/Fade';
@@ -60,8 +61,8 @@ const Features = () => {
                       <i className="fas fa-chevron-right"></i>
                     </div>
                   </a> */}
-                  <a style={{display: "inline-block"}} href={Resume} download="Resume_ChandanMishra">
-                    <div className="rsm btn_shadow">
+                  <a style={{display: "inline-block"}} href={Resume} download="ChandanMishra_Resume">
+                    <div className="rsm btn_shadow" style={{width: "8rem", display: "flex", justifyContent: "center"}}>
                       <b>Resume&nbsp;</b>
                       <i className="fas fa-chevron-down"></i>
                     </div>
