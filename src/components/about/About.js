@@ -1,14 +1,14 @@
-import React from "react"
-import "./About.css"
+import React from "react";
+import "./About.css";
 import logo from "../assets/logo.png";
 //import Resume from "../assets/Resume_ChandanMishra.pdf";
 import Resume from "../assets/ChandanMishra_Resume.pdf";
 
 //React Reveal
-import Fade from 'react-reveal/Fade';
+import Fade from "react-reveal/Fade";
 
 // Timeline Component
-import TimelineData from "./timelineAPI"
+import TimelineData from "./timelineAPI";
 import { ReactComponent as WorkIcon } from "../assets/work.svg";
 import { ReactComponent as SchoolIcon } from "../assets/school.svg";
 import {
@@ -20,62 +20,98 @@ import "react-vertical-timeline-component/style.min.css";
 //TODO: Add resume link
 
 const Features = () => {
-
-  const title_name = "< About me />"
+  const title_name = "< About me />";
   const workIconStyles = { background: "#06D6A0" };
   const schoolIconStyles = { background: "#f9c74f" };
 
   return (
     <>
-      <section id='about'>
+      <section id="about">
         <h1 className="title">{title_name}</h1>
-          <div className="abt">
-            <div className="abt-left">
-              {/* <div className="abt-card bg"></div> */}
-              <Fade left>
-                <div className="abt-card">
-                  <img className='abt-img img-shadow circle' src={logo} alt='Profile' />
-                </div>
-              </Fade>
-            </div>
-            <Fade right>
-              <div className="abt-right">
-                {/* <h1 className="title">{title_name}</h1> */}
-                {/* <p className="abt-sub">&emsp; My code's so clean, it makes whitespace jealous. 🧹</p> */}
-                <p className="abt-sub">&emsp; I speak fluent JavaScript, and my favorite word is 'function'. </p>
-                <p className="abt-desc">
-                  &emsp; As a software alchemist, I engineer digital products with an emphasis on <span>aesthetics, lightning-fast performance, and an impeccably seamless user experience</span>. Adept at algorithm driven development, I sculpt high-performance code with analytical precision. I'm the team's secret weapon, tackling complex projects with a blend of unwavering problem-solving and a fervent commitment to staying at the forefront of technology trends.
-                </p>
-                <p className="abt-desc">
-                  &emsp; Seeking to enrich your team with a dynamic, code-sorcerer? <a href="mailto:mishrachandan.dd@gmail.com" style={{ color: "#00bfff", textDecoration: "underline" }}>Hire Me <sup><i class="fas fa-external-link-alt fa-xs"></i></sup></a> and let's transform challenges into triumphs. 
-                </p>
+        <div className="abt">
+          <div className="abt-left">
+            {/* <div className="abt-card bg"></div> */}
+            <Fade left>
+              <div className="abt-card">
+                <img
+                  className="abt-img img-shadow circle"
+                  src={logo}
+                  alt="Profile"
+                />
+              </div>
+            </Fade>
+          </div>
+          <Fade right>
+            <div className="abt-right">
+              {/* <h1 className="title">{title_name}</h1> */}
+              {/* <p className="abt-sub">&emsp; My code's so clean, it makes whitespace jealous. 🧹</p> */}
+              <p className="abt-sub">
+                &emsp; I speak fluent JavaScript, and my favorite word is
+                'function'.{" "}
+              </p>
+              <p className="abt-desc">
+                &emsp; As a software alchemist, I engineer digital products with
+                an emphasis on{" "}
+                <span>
+                  aesthetics, lightning-fast performance, and an impeccably
+                  seamless user experience
+                </span>
+                . Adept at algorithm driven development, I sculpt
+                high-performance code with analytical precision. I'm the team's
+                secret weapon, tackling complex projects with a blend of
+                unwavering problem-solving and a fervent commitment to staying
+                at the forefront of technology trends.
+              </p>
+              <p className="abt-desc">
+                &emsp; Seeking to enrich your team with a dynamic,
+                code-sorcerer?{" "}
+                <a
+                  href="mailto:mishrachandan.dd@gmail.com"
+                  style={{ color: "#00bfff", textDecoration: "underline" }}
+                >
+                  Hire Me{" "}
+                  <sup>
+                    <i class="fas fa-external-link-alt fa-xs"></i>
+                  </sup>
+                </a>{" "}
+                and let's transform challenges into triumphs.
+              </p>
 
-                {/* download attribute in anchor tag, will download anything specified in href link and name it Chandan's Resume here
+              {/* download attribute in anchor tag, will download anything specified in href link and name it Chandan's Resume here
                 <a href={Resume} download="Resume_ChandanMishra"><b>Resume</b>
                     <i class="fas fa-arrow-down"></i>
                 </a> */}
-                <div style={{display: "flex", justifyContent: "center"}}>
-                  {/* <a style={{display: "inline-block"}} target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1ZmxTJeJcCtQXqD6_N9JPO26j6J6ZscGX/view?usp=drivesdk">
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                {/* <a style={{display: "inline-block"}} target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1ZmxTJeJcCtQXqD6_N9JPO26j6J6ZscGX/view?usp=drivesdk">
                     <div className="rsm btn_shadow">
                       <b>Resume&nbsp;</b>
                       <i className="fas fa-chevron-right"></i>
                     </div>
                   </a> */}
-                  <a style={{display: "inline-block"}} href={Resume} download="ChandanMishra_Resume">
-                    <div className="rsm btn_shadow" style={{width: "8rem", display: "flex", justifyContent: "center"}}>
-                      <b>Resume&nbsp;</b>
-                      <i className="fas fa-chevron-down"></i>
-                    </div>
-                  </a>
-                </div>
+                <a
+                  style={{ display: "inline-block" }}
+                  href={Resume}
+                  download="ChandanMishra_Resume"
+                >
+                  <div
+                    className="rsm btn_shadow"
+                    style={{
+                      width: "8rem",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <b>Resume&nbsp;</b>
+                    <i className="fas fa-chevron-down"></i>
+                  </div>
+                </a>
               </div>
-            </Fade>
-          </div>
-        
+            </div>
+          </Fade>
+        </div>
 
-
-  {/*------------------------------ Timeline Component ------------------------------ */}
-        <div className='timeline'>
+        {/*------------------------------ Timeline Component ------------------------------ */}
+        <div className="timeline">
           <h1 className="title">Timeline</h1>
           <VerticalTimeline>
             {TimelineData.map((element) => {
@@ -92,7 +128,10 @@ const Features = () => {
                   <h3 className="vertical-timeline-element-title">
                     {element.link ? (
                       <a href={element.link} style={{ color: "#00bfff" }}>
-                        {element.title} <sup><i className="fas fa-external-link-alt fa-xs"></i></sup>
+                        {element.title}{" "}
+                        <sup>
+                          <i className="fas fa-external-link-alt fa-xs"></i>
+                        </sup>
                       </a>
                     ) : (
                       element.title
@@ -109,10 +148,9 @@ const Features = () => {
             })}
           </VerticalTimeline>
         </div>
-
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Features
+export default Features;
