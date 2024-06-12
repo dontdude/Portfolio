@@ -4,6 +4,11 @@
         "source": "/resume",
         "destination": "https://drive.google.com/file/d/1Vih5Z27VWT8ou-Ki0FzFJGZhJQSlp8VH/view",
         "statusCode": 301
+      },
+      {
+        "source": "/swipe",
+        "destination": "https://chandan-swipe-assignment-frontend.vercel.app/",
+        "statusCode": 301
       }
     ]
   }
