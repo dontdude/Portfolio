@@ -9,6 +9,11 @@
         "source": "/swipe",
         "destination": "https://chandan-swipe-assignment-frontend.vercel.app/",
         "statusCode": 301
+      },
+      {
+        "source": "/spyne",
+        "destination": "https://chandan-spyne-assignment.vercel.app/",
+        "statusCode": 301
       }
     ]
   }
