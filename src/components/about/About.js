@@ -46,65 +46,83 @@ const Features = () => {
               {/* <h1 className="title">{title_name}</h1> */}
               {/* <p className="abt-sub">&emsp; My code's so clean, it makes whitespace jealous. 🧹</p> */}
               <p className="abt-sub">
-                &emsp; I speak fluent JavaScript, and my favorite word is
-                'function'.{" "}
+                &emsp; Building software like a fine art: precise, polished, and
+                profoundly impactful. 🚀
               </p>
               <p className="abt-desc">
-                &emsp; As a software alchemist, I engineer digital products with
-                an emphasis on{" "}
-                <span>
-                  aesthetics, lightning-fast performance, and an impeccably
-                  seamless user experience
-                </span>
-                . Adept at algorithm driven development, I sculpt
-                high-performance code with analytical precision. I'm the team's
-                secret weapon, tackling complex projects with a blend of
-                unwavering problem-solving and a fervent commitment to staying
-                at the forefront of technology trends.
-              </p>
+                {" "}
+                &emsp; I am a <span>software developer</span> with a profound
+                mastery of <span>JavaScript</span> and a passion for crafting
+                digital masterpieces. My expertise spans a wide range of
+                technologies including <span>React</span>,{" "}
+                <span>TypeScript</span>, and <span>Node.js</span>, allowing me
+                to build applications that are not only{" "}
+                <span>visually stunning</span> but also{" "}
+                <span>performance-optimized</span>. I pride myself on delivering{" "}
+                <span>clean, maintainable code</span> that drives{" "}
+                <span>seamless user experiences</span> and leverages
+                cutting-edge development practices.{" "}
+              </p>{" "}
               <p className="abt-desc">
-                &emsp; Seeking to enrich your team with a dynamic,
-                code-sorcerer?{" "}
+                {" "}
+                &emsp; With a keen eye for detail and a relentless pursuit of
+                excellence, I approach every project as an opportunity to{" "}
+                <span>innovate</span> and <span>excel</span>. My journey in
+                software development is marked by a blend of{" "}
+                <span>analytical prowess</span> and{" "}
+                <span>creative problem-solving</span>, making me a valuable
+                asset to any development team. Whether working on{" "}
+                <span>high-impact features</span> or intricate integrations, I
+                strive to contribute to projects that push the boundaries of
+                technology.{" "}
+              </p>{" "}
+              <p className="abt-desc">
+                {" "}
+                &emsp; Eager to bring my skills to your team?{" "}
                 <a
                   href="mailto:mishrachandan.dd@gmail.com"
                   style={{ color: "#00bfff", textDecoration: "underline" }}
                 >
-                  Hire Me{" "}
+                  {" "}
+                  <strong>Let's Connect</strong>{" "}
                   <sup>
-                    <i class="fas fa-external-link-alt fa-xs"></i>
-                  </sup>
+                    {" "}
+                    <i className="fas fa-external-link-alt fa-xs"></i>{" "}
+                  </sup>{" "}
                 </a>{" "}
-                and let's transform challenges into triumphs.
+                and explore how we can achieve greatness together.{" "}
               </p>
-
               {/* download attribute in anchor tag, will download anything specified in href link and name it Chandan's Resume here
                 <a href={Resume} download="Resume_ChandanMishra"><b>Resume</b>
                     <i class="fas fa-arrow-down"></i>
                 </a> */}
               <div style={{ display: "flex", justifyContent: "center" }}>
-                {/* <a style={{display: "inline-block"}} target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1ZmxTJeJcCtQXqD6_N9JPO26j6J6ZscGX/view?usp=drivesdk">
-                    <div className="rsm btn_shadow">
-                      <b>Resume&nbsp;</b>
-                      <i className="fas fa-chevron-right"></i>
-                    </div>
-                  </a> */}
-                <a
-                  style={{ display: "inline-block" }}
-                  href={Resume}
-                  download="ChandanMishra_Resume"
+                <div
+                  className="rsm btn_shadow"
+                  style={{
+                    width: "8rem",
+                    display: "flex",
+                    justifyContent: "center",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => {
+                    // Redirect to resume link
+                    window.open(
+                      "https://drive.google.com/file/d/1uaR_ne8H6M-6nQQf88XmKXkSCEi--K_w/view?usp=sharing",
+                      "_blank"
+                    );
+                    // Trigger file download
+                    const link = document.createElement("a");
+                    link.href = Resume;
+                    link.download = "ChandanMishra_Resume.pdf"; // file name
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                  }}
                 >
-                  <div
-                    className="rsm btn_shadow"
-                    style={{
-                      width: "8rem",
-                      display: "flex",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <b>Resume&nbsp;</b>
-                    <i className="fas fa-chevron-down"></i>
-                  </div>
-                </a>
+                  <b>Resume&nbsp;</b>
+                  <i className="fas fa-chevron-down"></i>
+                </div>
               </div>
             </div>
           </Fade>

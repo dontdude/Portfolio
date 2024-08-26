@@ -2,7 +2,7 @@
     "rewrites": [
       {
         "source": "/resume",
-        "destination": "https://drive.google.com/file/d/1Vih5Z27VWT8ou-Ki0FzFJGZhJQSlp8VH/view",
+        "destination": "https://drive.google.com/file/d/1uaR_ne8H6M-6nQQf88XmKXkSCEi--K_w/view?usp=sharing",
         "statusCode": 301
       },
       {

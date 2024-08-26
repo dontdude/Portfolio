@@ -22,9 +22,9 @@ const Skill = () => {
                 <img className="img-shadow" src={frontend} alt="Frontend" />
                 <h2 className="card-title">frontend</h2>
                 <ul>
-                  <li>React, Next JS, Redux</li>
+                  <li>React, Next JS</li>
                   <li>Vue, Vuex</li>
-                  <li>Angular, RxJS</li>
+                  <li>Redux, RTK</li>
                   <li>HTML, CSS, SASS, Tailwind CSS</li>
                   <li>Figma, Canva</li>
                   {/* <li>Redux / Context API</li> */}
@@ -41,7 +41,7 @@ const Skill = () => {
                   <li>SQL and NoSQL Databases</li>
                   <li>REST, GraphQL</li>
                   <li>Docker, Vercel, AWS, Firebase</li>
-                  <li>Postman, FastAPI</li>
+                  <li>Postman</li>
                   {/* <li>REST APIs</li> */}
                 </ul>
               </div>
