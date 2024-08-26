@@ -65,7 +65,6 @@ button {
   padding: 18px 20px;
   border-radius: 6px;
   transition: 0.3s all ease;
-  cursor: pointer;
   color: #000;
   transition: 0.5s;
 }

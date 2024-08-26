@@ -97,13 +97,12 @@ const Features = () => {
                     <i class="fas fa-arrow-down"></i>
                 </a> */}
               <div style={{ display: "flex", justifyContent: "center" }}>
-                <div
+                <button
                   className="rsm btn_shadow"
                   style={{
                     width: "8rem",
                     display: "flex",
                     justifyContent: "center",
-                    cursor: "pointer",
                   }}
                   onClick={() => {
                     // Redirect to resume link
@@ -122,7 +121,7 @@ const Features = () => {
                 >
                   <b>Resume&nbsp;</b>
                   <i className="fas fa-chevron-down"></i>
-                </div>
+                </button>
               </div>
             </div>
           </Fade>
