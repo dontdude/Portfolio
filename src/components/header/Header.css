@@ -38,7 +38,6 @@ header h2{
     padding: 18px 25px;
     border-radius: 6px;
     transition: 0.3s all ease;
-    cursor: pointer;
     height: fit-content;
     color:  #00bfff;
 }
