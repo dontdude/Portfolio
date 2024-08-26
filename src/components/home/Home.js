@@ -14,8 +14,8 @@ const Home = () => {
   // typewriter bug fix using typewriter hook : typed only one word
   const { text } = useTypewriter({
     words: [
-      " Full-stack Engineer.",
-      " Software Developer.",
+      " Full Stack Developer.",
+      " Inquisitive Engineer.",
       " Competitive Programmer.",
     ],
     loop: 0,
