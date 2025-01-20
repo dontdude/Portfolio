@@ -72,6 +72,16 @@ const Home = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
+                    href="https://leetcode.com/dontdude/"
+                    title="LeetCode"
+                  >
+                    <button className="btn_shadow">
+                      <img src={lt} alt="" />
+                    </button>
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
                     href="https://codeforces.com/profile/dontDude"
                     title="Codeforces"
                   >
@@ -87,16 +97,6 @@ const Home = () => {
                   >
                     <button className="btn_shadow">
                       <img src={gfg} alt="" />
-                    </button>
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://leetcode.com/dontdude/"
-                    title="LeetCode"
-                  >
-                    <button className="btn_shadow">
-                      <img src={lt} alt="" />
                     </button>
                   </a>
                 </div>

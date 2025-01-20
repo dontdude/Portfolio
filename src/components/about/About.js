@@ -157,9 +157,13 @@ const Features = () => {
                   <h5 className="vertical-timeline-element-subtitle">
                     {element.location}
                   </h5>
-                  <p className="description">{element.desc1}</p>
-                  <p className="description">{element.desc2}</p>
-                  <p className="description">{element.desc3}</p>
+                  <p className="description">{element?.desc1}</p>
+                  <p className="description">{element?.desc2}</p>
+                  <p className="description">{element?.desc3}</p>
+                  <p className="description">{element?.desc4}</p>
+                  <p className="description">{element?.desc5}</p>
+                  <p className="description">{element?.desc6}</p>
+                  <p className="description">{element?.desc7}</p>
                 </VerticalTimelineElement>
               );
             })}
