@@ -2,17 +2,37 @@
     "rewrites": [
       {
         "source": "/resume",
-        "destination": "https://drive.google.com/file/d/1uaR_ne8H6M-6nQQf88XmKXkSCEi--K_w/view?usp=sharing",
+        "destination": "https://drive.google.com/file/d/1HgIr27oqiePw3EVxDSCWAlq4xCDtkSeq/view",
         "statusCode": 301
       },
       {
-        "source": "/swipe",
-        "destination": "https://chandan-swipe-assignment-frontend.vercel.app/",
+        "source": "/linkedin",
+        "destination": "https://www.linkedin.com/in/chandan-dontdude/",
         "statusCode": 301
       },
       {
-        "source": "/spyne",
-        "destination": "https://chandan-spyne-assignment.vercel.app/",
+        "source": "/github",
+        "destination": "https://github.com/dontdude",
+        "statusCode": 301
+      },
+      {
+        "source": "/leetcode",
+        "destination": "https://leetcode.com/dontdude/",
+        "statusCode": 301
+      },
+      {
+        "source": "/codeforces",
+        "destination": "https://codeforces.com/profile/dontDude",
+        "statusCode": 301
+      },
+      {
+        "source": "/gfg",
+        "destination": "https://auth.geeksforgeeks.org/user/dontdude/practice",
+        "statusCode": 301
+      },
+      {
+        "source": "/medium",
+        "destination": "https://medium.com/@imchandan1947",
         "statusCode": 301
       }
     ]
