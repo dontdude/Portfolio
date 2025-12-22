@@ -21,8 +21,8 @@
     margin: 1.5rem 2rem;
     padding: 10px;
     border-radius: 10px;
-    background: linear-gradient(145deg, #e9ecee, #fdfcfc);
-    box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+    background: var(--card-bg);
+    box-shadow: var(--box-shadow);
 }
 .skl-card:hover {
     background: none;

@@ -12,14 +12,16 @@ header ul li {
 }
 
 /* applies style to anchor tag of list tag inside header tag */
+/* applies style to anchor tag of list tag inside header tag */
 header ul li a {
    transition: 0.5s;
    font-size: 15px;
    font-weight: 500;
    letter-spacing: 1px;
+   color: var(--title-color); /* Added explicit color */
 }
 header ul li a:hover {
-    color:  #00bfff;
+    color:  var(--primary-color);
 }
 
 img {
@@ -32,6 +34,10 @@ header h2{
     display: inline;
     vertical-align: top;
     margin-left: 20px;
+    color: var(--title-color); /* Added explicit color */
+}
+header h2 a {
+    color: var(--title-color);
 }
 
 .home-btn {
@@ -39,15 +45,15 @@ header h2{
     border-radius: 6px;
     transition: 0.3s all ease;
     height: fit-content;
-    color:  #00bfff;
+    color:  var(--primary-color);
 }
 .home-btn {
     /* creates an image consisting of a progressive transition between two or more colors along a straight line */
-    background: linear-gradient(145deg, #e2e8ec, #ffffff);
-    box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+    background: var(--card-bg);
+    box-shadow: var(--box-shadow);
 }
 .home-btn:hover {
-    background:  #00bfff;
+    background:  var(--btn-hover);
     color: white;
 }
 /* On larger screen toggle button is not shown */
@@ -61,11 +67,11 @@ header h2{
     top: 0;
     z-index: 1000;
     width: 100%;
-    /* background-color: #e4f0f7; */
+    background-color: var(--body-bg); /* Explicit background */
     box-shadow: -1px 11px 24px -11px rgba(0, 0, 0, 0.75);
     transition: 0.5s;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    /* -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); */
     /* glass blur using backdrop-filter */
 }
 
@@ -84,7 +90,7 @@ header h2{
         transition: all 0.5s ease-in-out;
         width: 60%;
         height: 100vh;
-        background-color: white;
+        background-color: var(--body-bg);
         z-index: 888;
     }
     header ul li {
@@ -104,7 +110,7 @@ header h2{
         position: absolute;
         top: 35px;
         right: 20px;
-        color:  #00bfff;
+        color:  var(--primary-color);
         display: block;
         font-size: 25px;
         z-index: 999;
@@ -113,8 +119,8 @@ header h2{
         right: 45%;
     }
     .close.home-btn {
-        background: linear-gradient(145deg, #e2e8ec, #ffffff);
-        color:  #00bfff;
+        background: var(--card-bg);
+        color:  var(--primary-color);
         border-radius: 50%;
         padding: 0;
         width: 60px;

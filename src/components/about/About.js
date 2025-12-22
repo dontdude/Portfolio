@@ -76,7 +76,7 @@ const Features = () => {
                 &emsp; Ready to solve complex engineering challenges?{" "}
                 <a
                   href="mailto:mishrachandan.dd@gmail.com"
-                  style={{ color: "#00bfff", textDecoration: "underline" }}
+                  className="link-primary"
                 >
                   {" "}
                   <strong>Let's Connect</strong>{" "}
@@ -139,7 +139,7 @@ const Features = () => {
                 >
                   <h3 className="vertical-timeline-element-title">
                     {element.link ? (
-                      <a href={element.link} style={{ color: "#00bfff" }}>
+                      <a href={element.link} className="text-primary">
                         {element.title}{" "}
                         <sup>
                           <i className="fas fa-external-link-alt fa-xs"></i>

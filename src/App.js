@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./components/header/Header.js";
 import Hero from "./components/home/Home.js";
 import About from "./components/about/About.js";
@@ -10,9 +10,30 @@ import "./App.css";
 import AnimatedCursor from "react-animated-cursor";
 
 const App = () => {
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") || "dark"
+  );
+
+  const toggleTheme = () => {
+    if (theme === "dark") {
+      setTheme("light");
+    } else {
+      setTheme("dark");
+    }
+  };
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
+
+  // Dynamic cursor colors based on theme
+  const cursorColor = theme === "dark" ? "255, 1, 79" : "0, 191, 255"; // Pink for dark, Blue for light
+  const cursorOuterBorder = theme === "dark" ? "3px solid #ff014f" : "3px solid #006bbf";
+
   return (
-    <div>
-      <Header />
+    <div className={`App ${theme}`}>
+      <Header theme={theme} toggleTheme={toggleTheme} />
       <Hero />
       <hr />
       <About />
@@ -32,11 +53,11 @@ const App = () => {
         hasBlendMode={true}
         showSystemCursor={false}
         innerStyle={{
-          backgroundColor: "#00bfff",
+          backgroundColor: `rgb(${cursorColor})`,
           zIndex: 10000,
         }}
         outerStyle={{
-          border: "3px solid #006bbf",
+          border: cursorOuterBorder,
           zIndex: 10000,
         }}
       />

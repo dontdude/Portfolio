@@ -5,20 +5,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--body-bg);
 }
 .hero h1 {
   font-size: 60px;
   font-weight: bold;
+  color: var(--title-color);
 }
 
 .hero h1 span {
   display: block;
-  color: #0184ff;
+  color: var(--primary-dark);
 }
 .hero h2 {
   font-size: 50px;
   font-weight: bold;
-  color: #3c3e41;
+  color: var(--text-color);
 }
 .hero_btn {
   margin-top: 10%;
@@ -26,7 +28,7 @@
 .hero_btn h4 {
   font-weight: 500;
   letter-spacing: 2px;
-  color: #43474b;
+  color: var(--text-color);
   font-size: 15px;
   margin: 30px 0 0 0;
 }
@@ -52,10 +54,8 @@
   justify-content: center;
 } */
 .hero .right_img {
-  background: linear-gradient(145deg, #e2e8ec, #ffffff);
-  box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
-  /* background: linear-gradient(145deg, #cbd8e1, #e9d2d2);
-  box-shadow: 4px 4px 8px #928e8e, -4px -4px 8px #fdfbfb; */
+  background: var(--card-bg);
+  box-shadow: var(--box-shadow);
   border-radius: 10px;
   height: 510px;
   width: 510px;

@@ -43,7 +43,7 @@ div.card-btn {
     margin-left: 0px;
 }
 .Prj .desc-sml a{
-    color: #1f73f0;
+    color: var(--link-color);
 }
 
 .Prj .arrow {
@@ -51,7 +51,7 @@ div.card-btn {
     right: 30px;
     top: 11%;
     transform: rotate(-45deg);
-    color: #00bfff;
+    color: var(--primary-color);
     opacity: 0;
     transition: 0.5s;
 }
@@ -64,10 +64,10 @@ div.card-btn {
     padding-bottom: 30px;
 }
 .Prj .Prj-card:hover h2 {
-    color: #00bfff;
+    color: var(--primary-color);
 }
 .Prj .Prj-card:hover {
-    color: black;
+    color: var(--text-color);
 }
 /*------------popup--------*/
 body.active-modal {
@@ -94,20 +94,20 @@ body.active-modal {
 }
 
 .overlay {
-background-color: #ecf0f3;
+background-color: var(--body-bg);
 }
 .modal-content {
     position: absolute;
     top: 12%;
     left: 8%;
     line-height: 1.4;
-    background: #f0f3f5;
+    background: var(--card-bg);
     padding: 14px 28px;
     border-radius: 3px;
     max-width: 85%;
     min-width: 60%;
     z-index: 9999;
-    box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+    box-shadow: var(--box-shadow);
     padding: 50px;
     border-radius: 10px;
 }
@@ -126,11 +126,11 @@ background-color: #ecf0f3;
 }
 .modal-text button {
 margin-right: 20px;
-color: #00bfff;
+color: var(--primary-color);
 }
 
 .modal a{
-    color: #1f73f0;
+    color: var(--link-color);
 }
 
 .modal-text span {

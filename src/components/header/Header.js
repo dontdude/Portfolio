@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "./Header.css";
 import logo from "../assets/logo.png";
 
-const Header = () => {
+const Header = ({ theme, toggleTheme }) => {
 
   // when we scroll, what header looks like
   window.addEventListener("scroll", function () {
@@ -41,6 +41,11 @@ const Header = () => {
             <li><a href="#skill">SKILLS</a></li>
             <li><a href="#project">PROJECTS</a></li>
             <li><a href="#contact">CONTACT</a></li>
+            <li>
+              <button className='home-btn' onClick={toggleTheme}>
+                {theme === "dark" ? <i class="fas fa-sun"></i> : <i class="fas fa-moon"></i>}
+              </button>
+            </li>
           </ul>
 
           <button className='toggle' onClick={() => setMobile(!ismobile)}>
