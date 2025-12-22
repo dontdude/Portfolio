@@ -11,8 +11,8 @@ html {
 }
 :root {
   --body-bg: rgb(234, 241, 243);
-  --title-color: #3c3e41;
-  --text-color: #3c3e41;
+  --title-color: #1a1c20; /* Darkened for better contrast */
+  --text-color: #333333; /* Darkened for accessibility */
   --primary-color: #00bfff;
   --primary-dark: #0184ff;
   --card-bg: linear-gradient(145deg, #e2e8ec, #ffffff);

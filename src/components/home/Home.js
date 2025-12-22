@@ -32,13 +32,13 @@ const Home = () => {
             <h1>
               Hey👋, I’m <span>Chandan Mishra👨🏻‍💻</span>
             </h1>
-            <h2>
-              a<span>{text}</span>
+            <h2 className="typewriter-wrapper">
+              a <span>{text}</span>
             </h2>
 
             <div className="hero_btn d_flex">
               <div className="col_1">
-                <h4>FIND ME ON</h4>
+                <h3>FIND ME ON</h3>
                 <div className="button">
                   <a
                     target="_blank"
