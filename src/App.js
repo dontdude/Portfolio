@@ -3,7 +3,7 @@ import Header from "./components/header/Header.js";
 import Hero from "./components/home/Home.js";
 import "./App.css";
 import AnimatedCursor from "react-animated-cursor";
-import ParticleBackground from "./components/ParticleBackground";
+import StarCanvas from "./components/StarCanvas";
 
 // Lazy Load components below the fold for performance
 const About = lazy(() => import("./components/about/About.js"));
@@ -36,7 +36,7 @@ const App = () => {
 
   return (
     <div className={`App ${theme}`}>
-      <ParticleBackground theme={theme} />
+      <StarCanvas theme={theme} />
       <Header theme={theme} toggleTheme={toggleTheme} />
       <Hero />
       <Suspense fallback={<div style={{ textAlign: 'center', padding: '50px' }}>Loading...</div>}>

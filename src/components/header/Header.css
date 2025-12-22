@@ -51,7 +51,7 @@ header h2 a {
     font-size: 30px;
     font-weight: 700;
     letter-spacing: 1px;
-    font-family: 'Poppins', sans-serif; /* Try a punchy font if available, or fallback */
+    font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu', monospace; /* Terminal font */
     background: -webkit-linear-gradient(45deg, var(--primary-color), var(--primary-dark));
     -webkit-background-clip: text;
     background-clip: text;
@@ -63,8 +63,18 @@ header h2 a:hover {
     transform: scale(1.05);
     display: inline-block;
 }
-header h2 a {
-    color: var(--title-color);
+
+.terminal-cursor {
+    display: inline-block;
+    width: 6px; /* Cursor width */
+    color: var(--primary-color);
+    -webkit-text-fill-color: var(--primary-color);
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 .home-btn {

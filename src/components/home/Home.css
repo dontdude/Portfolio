@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--body-bg);
+  /* background-color: var(--body-bg); */
 }
 .hero h1 {
   font-size: 60px;
