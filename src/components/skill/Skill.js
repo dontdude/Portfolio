@@ -19,7 +19,7 @@ const Skill = () => {
           <div className="skl-cont">
             <Fade left>
               <div className="skl-card">
-                <img className="img-shadow" src={frontend} alt="Frontend" />
+                <img className="img-shadow" src={frontend} alt="Frontend" width="600" height="400" />
                 <h2 className="card-title">Frontend</h2>
                 <ul>
                   <li>React.js, Next.js, atomic design</li>
@@ -32,7 +32,7 @@ const Skill = () => {
             </Fade>
             <Fade bottom>
               <div className="skl-card">
-                <img className="img-shadow" src={backend} alt="Backend" />
+                <img className="img-shadow" src={backend} alt="Backend" width="600" height="400" />
                 <h2 className="card-title">Backend</h2>
                 <ul>
                   <li>Node.js, Python, Kafka</li>
@@ -45,7 +45,7 @@ const Skill = () => {
             </Fade>
             <Fade right>
               <div className="skl-card">
-                <img className="img-shadow" src={general} alt="System Design" />
+                <img className="img-shadow" src={general} alt="System Design" width="600" height="400" />
                 <h2 className="card-title">System Design</h2>
                 <ul>
                   <li>Real-time Systems</li>

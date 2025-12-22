@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import logo from "../assets/logo.png";
+// import logo from "../assets/logo.png";
 //import Resume from "../assets/Resume_ChandanMishra.pdf";
 import Resume from "../assets/ChandanMishra_Resume.pdf";
 
@@ -18,6 +18,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 
 //TODO: Add resume link
+const logo = "https://avatars.githubusercontent.com/u/75321407?s=400";
 
 const Features = () => {
   const title_name = "< About me />";

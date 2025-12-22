@@ -1,7 +1,7 @@
 .hero {
   /* position: relative; */
   height: 100vh;
-  width: 100vw;
+  width: 100%; /* Changed from 100vw to prevent horizontal scrollbar on Windows */
   display: flex;
   justify-content: center;
   align-items: center;

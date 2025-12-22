@@ -40,6 +40,8 @@
 }
 .skl-card img {
     height: 30vh;
+    width: auto; /* Ensure aspect ratio is preserved */
+    object-fit: contain;
 }
 @media (max-width: 768px) {
     .skl-card li{

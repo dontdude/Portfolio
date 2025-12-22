@@ -96,7 +96,7 @@ const Card = (props) => {
                    <i class="fab fa-github"></i> Repository
                 </a>
               </div>
-              <button className='close-modal btn_shadow' onClick={toggleModal}>
+              <button className='close-modal btn_shadow' onClick={toggleModal} aria-label="Close Modal">
                 <i class='fas fa-times'></i>
               </button>
             </div>

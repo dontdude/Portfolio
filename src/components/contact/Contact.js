@@ -57,7 +57,7 @@ const Contact = () => {
               <div className='left'>
                 <div className='box box_shadow'>
                   <div className='img'>
-                    <img className="cont-img img-shadow" src={contact} alt='Contact Illustration' />
+                    <img className="cont-img img-shadow" src={contact} alt='Contact Illustration' width="500" height="350" />
                   </div>
                   <div className='details'>
                    <h1>Get In Touch!</h1>
@@ -66,10 +66,10 @@ const Contact = () => {
                     <p><span>Email</span>: mishrachandan.dd@gmail.com</p>
                     <p><span>Address</span>: Noida, Uttar Pradesh, India</p> <br />
                     <div className="card-btn">
-                        <a target="_blank" rel="noopener noreferrer" className="btn_shadow" href="https://t.me/dd215412">
+                        <a target="_blank" rel="noopener noreferrer" className="btn_shadow" href="https://t.me/dd215412" aria-label="Chat on Telegram">
                            Chat <i class="fas fa-paper-plane"></i>
                         </a>
-                        <a target="_blank" rel="noopener noreferrer" className="btn_shadow" href="mailto:mishrachandan.dd@gmail.com">
+                        <a target="_blank" rel="noopener noreferrer" className="btn_shadow" href="mailto:mishrachandan.dd@gmail.com" aria-label="Send Email">
                            Mail <i class="fas fa-envelope"></i>
                         </a>
                     </div>
@@ -83,15 +83,15 @@ const Contact = () => {
                 <form onSubmit={formSubmit}>
                     <div className='input'>
                       <span>YOUR NAME</span>
-                      <input type='text' name='name' value={data.name} onChange={InputEvent} />
+                      <input type='text' name='name' value={data.name} onChange={InputEvent} aria-label="Name" />
                     </div>
                     <div className='input'>
                       <span>YOUR EMAIL </span>
-                      <input type='email' name='email' value={data.email} onChange={InputEvent} />
+                      <input type='email' name='email' value={data.email} onChange={InputEvent} aria-label="Email" />
                     </div>
                   <div className='input'>
                     <span>YOUR MESSAGE </span>
-                    <textarea cols='30' rows='10' name='message' value={data.message} onChange={InputEvent}></textarea>
+                    <textarea cols='30' rows='10' name='message' value={data.message} onChange={InputEvent} aria-label="Message"></textarea>
                   </div>
                   <button className='btn_shadow'>
                     SEND <i class='fas fa-arrow-right'></i>

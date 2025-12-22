@@ -1,10 +1,18 @@
 header {
-    /* vh : Relative to 1% of the height of the viewport, similarly vw for width*/
-    height: 10vh;
-    line-height: 10vh;
+    height: 90px;
+    background-color: transparent;
+    transition: 0.5s;
+    /* Removed line-height and vh to prevent shrinking on devtools open */
 }
 header .container{
-    padding-top: 15px;
+    padding-top: 15px; /* Adjust if needed, or stick to flex centering */
+    display: flex;
+    align-items: center; /* Vertically center logo and nav */
+    justify-content: space-between;
+}
+header ul {
+    display: flex;
+    align-items: center; /* Vertically center items in list */
 }
 header ul li {
     /* spacing between list item, when they are horizontal */
@@ -29,12 +37,29 @@ img {
     vertical-align: -2vh;
     /*negative vertical-align prop shifts element down */
 }
-header h2{
+header h2 {
     /* display inline to make h2 tag appear in same line with logo image */
-    display: inline;
-    vertical-align: top;
-    margin-left: 20px;
-    color: var(--title-color); /* Added explicit color */
+    display: inline-block; /* Changed to inline-block */
+    vertical-align: middle; /* Center effectively */
+    margin-left: 0; /* No logo, so no margin needed */
+}
+
+header h2 a {
+    color: var(--title-color);
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif; /* Try a punchy font if available, or fallback */
+    background: -webkit-linear-gradient(45deg, var(--primary-color), var(--primary-dark));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.3s ease;
+}
+
+header h2 a:hover {
+    transform: scale(1.05);
+    display: inline-block;
 }
 header h2 a {
     color: var(--title-color);
@@ -61,8 +86,9 @@ header h2 a {
     display: none;
 }    
 /* active class is activated on scroll, and thus these below property kicks in, on scroll    */
+/* active class is activated on scroll, and thus these below property kicks in, on scroll    */
 .header.active {
-    height: 12vh;
+    height: 90px;
     position: fixed;
     top: 0;
     z-index: 1000;

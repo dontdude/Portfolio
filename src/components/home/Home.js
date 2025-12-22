@@ -46,7 +46,7 @@ const Home = () => {
                     href="https://www.linkedin.com/in/chandan-dontdude/"
                     title="LinkedIn"
                   >
-                    <button className="btn_shadow">
+                    <button className="btn_shadow" aria-label="LinkedIn">
                       <i className="fab fa-linkedin-in"></i>
                     </button>
                   </a>
@@ -56,7 +56,7 @@ const Home = () => {
                     href="https://github.com/dontdude"
                     title="GitHub"
                   >
-                    <button className="btn_shadow">
+                    <button className="btn_shadow" aria-label="GitHub">
                       <i className="fab fa-github"></i>
                     </button>
                   </a>
@@ -66,7 +66,7 @@ const Home = () => {
                     href="https://medium.com/@dontdude"
                     title="Medium"
                   >
-                    <button className="btn_shadow">
+                    <button className="btn_shadow" aria-label="Medium">
                       <i className="fab fa-medium"></i>
                     </button>
                   </a>
@@ -76,8 +76,8 @@ const Home = () => {
                     href="https://leetcode.com/dontdude/"
                     title="LeetCode"
                   >
-                    <button className="btn_shadow">
-                      <img src={lt} alt="" />
+                    <button className="btn_shadow" aria-label="LeetCode">
+                      <img src={lt} alt="LeetCode" width="20" height="22" />
                     </button>
                   </a>
                   <a
@@ -86,8 +86,8 @@ const Home = () => {
                     href="https://codeforces.com/profile/dontDude"
                     title="Codeforces"
                   >
-                    <button className="btn_shadow">
-                      <img src={cf} alt="" />
+                    <button className="btn_shadow" aria-label="Codeforces">
+                      <img src={cf} alt="Codeforces" width="20" height="22" />
                     </button>
                   </a>
                   <a
@@ -96,8 +96,8 @@ const Home = () => {
                     href="https://auth.geeksforgeeks.org/user/dontdude/practice"
                     title="GeeksforGeeks"
                   >
-                    <button className="btn_shadow">
-                      <img src={gfg} alt="" />
+                    <button className="btn_shadow" aria-label="GeeksforGeeks">
+                      <img src={gfg} alt="GeeksforGeeks" width="20" height="22" />
                     </button>
                   </a>
                 </div>

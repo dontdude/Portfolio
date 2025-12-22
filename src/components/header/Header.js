@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "./Header.css";
-import logo from "../assets/logo.png";
+// import logo from "../assets/logo.png";
+const logo = "https://avatars.githubusercontent.com/u/75321407?s=200";
 
 const Header = ({ theme, toggleTheme }) => {
 
@@ -29,7 +30,6 @@ const Header = ({ theme, toggleTheme }) => {
      <header className="header">
       <div className="container d_flex">
        <div className="logo">
-         <img className="circle" src={logo} alt='Chandan Mishra Logo' />
          <h2><a href="#home">dontdude</a></h2>
        </div>
 
@@ -42,13 +42,13 @@ const Header = ({ theme, toggleTheme }) => {
             <li><a href="#project">PROJECTS</a></li>
             <li><a href="#contact">CONTACT</a></li>
             <li>
-              <button className='home-btn' onClick={toggleTheme}>
+              <button className='home-btn' onClick={toggleTheme} aria-label="Toggle Theme">
                 {theme === "dark" ? <i class="fas fa-sun"></i> : <i class="fas fa-moon"></i>}
               </button>
             </li>
           </ul>
 
-          <button className='toggle' onClick={() => setMobile(!ismobile)}>
+          <button className='toggle' onClick={() => setMobile(!ismobile)} aria-label="Toggle Menu">
             {/* to understand why button is not visible in larger screen, read "open", "close" styles in header.css */}
             {ismobile ? <i className='fas fa-times close home-btn'></i> : <i className='fas fa-bars open'></i>}
             {/* fa-times fa-bars, classes from font awesome, link in index.html */}
