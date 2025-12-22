@@ -61,7 +61,7 @@ const Contact = () => {
                   </div>
                   <div className='details'>
                    <h1>Get In Touch!</h1>
-                    <p>I am available for full time roles in Software Development. If you think you have any project/work that matches my skill set, or if you just want to say hi, you can contact me with the following details.</p> <br />
+                    <p>I am actively seeking SDE-2 / Senior Software Engineering roles where I can drive architectural decisions and build high-performance distributed systems. If you're looking for an engineer who prioritizes scalability and business impact, let's connect.</p> <br />
                     <p><span>Phone</span>: +91 7011125038</p>
                     <p><span>Email</span>: mishrachandan.dd@gmail.com</p>
                     <p><span>Address</span>: Noida, Uttar Pradesh, India</p> <br />

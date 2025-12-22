@@ -14,9 +14,10 @@ const Home = () => {
   // typewriter bug fix using typewriter hook : typed only one word
   const { text } = useTypewriter({
     words: [
-      " Full Stack Developer.",
-      " Inquisitive Engineer.",
+      " Senior Software Engineer.",
+      " Systems Architect.",
       " Competitive Programmer.",
+      " Problem Solver.",
     ],
     loop: 0,
     onLoopDone: () => console.log(`loop completed after 3 runs.`),
@@ -62,7 +63,7 @@ const Home = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://medium.com/@imchandan1947"
+                    href="https://medium.com/@dontdude"
                     title="Medium"
                   >
                     <button className="btn_shadow">

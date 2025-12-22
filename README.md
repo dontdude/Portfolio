@@ -35,7 +35,7 @@
 <a href="https://auth.geeksforgeeks.org/user/dontdude/practice">
     <img src="https://img.shields.io/badge/GeeksforGeeks-298D46?style=for-the-badge&logo=geeksforgeeks&logoColor=white" alt="GeeksForGeeksBadge">
 </a>
-<a href="https://medium.com/@imchandan1947">
+<a href="https://medium.com/@dontdude">
     <img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" alt="Medium Badge">
 </a>
 <a href="https://hashnode.com/@dontdude">
@@ -125,7 +125,7 @@ hobbies: ["Anime", "Cinema", "Philosophy", "Gaming", "Science"]
 <!-- My published blogs -->
 <h1 align="center"> 📃 My published Blogs</h1>
 <p align="center">
-  <a href="https://medium.com/@imchandan1947">
+  <a href="https://medium.com/@dontdude">
     <img src="https://github-readme-medium.vercel.app/?username=imchandan1947&limit=1&bg=151515&text=#9f9f9f" alt="My Medium blogs" />
   </a>
 </p>

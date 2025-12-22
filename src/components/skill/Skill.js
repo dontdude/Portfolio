@@ -20,15 +20,13 @@ const Skill = () => {
             <Fade left>
               <div className="skl-card">
                 <img className="img-shadow" src={frontend} alt="Frontend" />
-                <h2 className="card-title">frontend</h2>
+                <h2 className="card-title">Frontend</h2>
                 <ul>
-                  <li>React, Next JS</li>
-                  <li>Vue, Vuex</li>
-                  <li>Redux, RTK</li>
-                  <li>HTML, CSS, SASS, Tailwind CSS</li>
-                  <li>Figma, Canva</li>
-                  {/* <li>Redux / Context API</li> */}
-                  {/* <li>BootsTrap</li> */}
+                  <li>React.js, Next.js, atomic design</li>
+                  <li>TypeScript, Redux Toolkit</li>
+                  <li>Vue.js, HTML5, SASS</li>
+                  <li>WebView, WebSockets, SSE</li>
+                  <li>Chrome DevTools, Service Workers</li>
                 </ul>
               </div>
             </Fade>
@@ -37,27 +35,24 @@ const Skill = () => {
                 <img className="img-shadow" src={backend} alt="Backend" />
                 <h2 className="card-title">Backend</h2>
                 <ul>
-                  <li>Node, Express</li>
-                  <li>SQL and NoSQL Databases</li>
-                  <li>REST, GraphQL</li>
-                  <li>Docker, Vercel, AWS, Firebase</li>
-                  <li>Postman</li>
-                  {/* <li>REST APIs</li> */}
+                  <li>Node.js, Python, Kafka</li>
+                  <li>PostgreSQL, MongoDB</li>
+                  <li>Nginx, AWS, Docker</li>
+                  <li>REST, GraphQL, gRPC</li>
+                  <li>Git, GitHub, CI/CD</li>
                 </ul>
               </div>
             </Fade>
             <Fade right>
               <div className="skl-card">
-                <img className="img-shadow" src={general} alt="General" />
-                <h2 className="card-title">General</h2>
+                <img className="img-shadow" src={general} alt="System Design" />
+                <h2 className="card-title">System Design</h2>
                 <ul>
-                  <li>JavaScript / TypeScript</li>
-                  <li>C / C++</li>
-                  <li>GoLang</li>
-                  <li>Git, GitHub, Bitbucket</li>
-                  <li>GenAI, HuggingFace, Langchain</li>
-                  {/* <li>VS Code</li>
-                      <li>Linux</li> */}
+                  <li>Real-time Systems</li>
+                  <li>Event-Driven Architecture</li>
+                  <li>Caching (Redis/CDN)</li>
+                  <li>Monorepo Architecture</li>
+                  <li>GenAI, LLM Integration</li>
                 </ul>
               </div>
             </Fade>
