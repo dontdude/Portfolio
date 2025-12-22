@@ -30,7 +30,7 @@ const Header = ({ theme, toggleTheme }) => {
       <div className="container d_flex">
        <div className="logo">
          <img className="circle" src={logo} alt='' />
-         <h2><a href="#home">mchandan.me</a></h2>
+         <h2><a href="#home">dontdude</a></h2>
        </div>
 
        <div className="navlink">

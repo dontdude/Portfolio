@@ -15,7 +15,7 @@
 
 <div align="center" style="display: flex; flex-wrap: wrap; margin: 0 auto; width: 100%; align-items: center; justify-content: center; gap: 10px">
 
-<a href="https://mchandan.me/">
+<a href="https://dontdude.vercel.app/">
     <img src="https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white" alt="PortFolio Badge">
 </a>
 <a href="https://www.linkedin.com/in/chandan-dontdude/">

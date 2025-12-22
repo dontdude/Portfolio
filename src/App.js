@@ -8,6 +8,7 @@ import Contact from "./components/contact/Contact.js";
 import Footer from "./components/footer/Footer.js";
 import "./App.css";
 import AnimatedCursor from "react-animated-cursor";
+import ParticleBackground from "./components/ParticleBackground";
 
 const App = () => {
   const [theme, setTheme] = useState(
@@ -33,6 +34,7 @@ const App = () => {
 
   return (
     <div className={`App ${theme}`}>
+      <ParticleBackground theme={theme} />
       <Header theme={theme} toggleTheme={toggleTheme} />
       <Hero />
       <hr />
