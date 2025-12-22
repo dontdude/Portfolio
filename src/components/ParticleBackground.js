@@ -71,7 +71,7 @@ const ParticleBackground = ({ theme }) => {
     },
     retina_detect: true,
     background: {
-      color: "transparent", // Background color handled by CSS
+      color: theme === "dark" ? "#212428" : "rgb(234, 241, 243)", // Dynamic Background
       image: "",
       position: "50% 50%",
       repeat: "no-repeat",

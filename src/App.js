@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense, lazy } from "react";
 import Header from "./components/header/Header.js";
 import Hero from "./components/home/Home.js";
-import About from "./components/about/About.js";
-import Skill from "./components/skill/Skill.js";
-import Projects from "./components/projects/Projects.js";
-import Contact from "./components/contact/Contact.js";
-import Footer from "./components/footer/Footer.js";
 import "./App.css";
 import AnimatedCursor from "react-animated-cursor";
 import ParticleBackground from "./components/ParticleBackground";
+
+// Lazy Load components below the fold for performance
+const About = lazy(() => import("./components/about/About.js"));
+const Skill = lazy(() => import("./components/skill/Skill.js"));
+const Projects = lazy(() => import("./components/projects/Projects.js"));
+const Contact = lazy(() => import("./components/contact/Contact.js"));
+const Footer = lazy(() => import("./components/footer/Footer.js"));
 
 const App = () => {
   const [theme, setTheme] = useState(
@@ -37,15 +39,17 @@ const App = () => {
       <ParticleBackground theme={theme} />
       <Header theme={theme} toggleTheme={toggleTheme} />
       <Hero />
-      <hr />
-      <About />
-      <hr />
-      <Skill />
-      <hr />
-      <Projects />
-      <hr />
-      <Contact />
-      <Footer />
+      <Suspense fallback={<div style={{ textAlign: 'center', padding: '50px' }}>Loading...</div>}>
+        <hr />
+        <About />
+        <hr />
+        <Skill />
+        <hr />
+        <Projects />
+        <hr />
+        <Contact />
+        <Footer />
+      </Suspense>
       <AnimatedCursor
         innerSize={8}
         outerSize={35}

@@ -57,7 +57,7 @@ const Contact = () => {
               <div className='left'>
                 <div className='box box_shadow'>
                   <div className='img'>
-                    <img className="cont-img img-shadow" src={contact} alt='' />
+                    <img className="cont-img img-shadow" src={contact} alt='Contact Illustration' />
                   </div>
                   <div className='details'>
                    <h1>Get In Touch!</h1>
