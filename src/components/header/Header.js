@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./Header.css";
+import Music from "../common/Music";
 // import logo from "../assets/logo.png";
 const logo = "https://avatars.githubusercontent.com/u/75321407?s=200";
 
@@ -45,6 +46,9 @@ const Header = ({ theme, toggleTheme }) => {
             <li><a href="#skill">SKILLS</a></li>
             <li><a href="#project">PROJECTS</a></li>
             <li><a href="#contact">CONTACT</a></li>
+            <li>
+              <Music />
+            </li>
             <li>
               <button className='home-btn' onClick={toggleTheme} aria-label="Toggle Theme">
                 {theme === "dark" ? <i className="fas fa-sun"></i> : <i className="fas fa-moon"></i>}

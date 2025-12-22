@@ -170,3 +170,35 @@ header h2 a:hover {
         height: 11vh;
     }
 }
+
+.music-btn {
+    padding: 18px 25px; /* Matched home-btn size */
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    height: fit-content;
+    color: var(--primary-color);
+    background: var(--card-bg);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    /* margin-left removed: controlled by li spacing */
+}
+
+.music-btn:hover {
+    background: var(--btn-hover);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.music-btn.playing {
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--primary-color);
+    box-shadow: inset 0 0 10px var(--primary-color), 0 0 10px var(--primary-color); /* Intensive Neon Glow */
+    border: 1px solid var(--primary-color);
+}
+
+.music-btn.playing:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #fff;
+    border-color: #fff;
+    box-shadow: inset 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
+}
