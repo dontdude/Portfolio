@@ -75,30 +75,33 @@ const Home = () => {
                     rel="noopener noreferrer"
                     href="https://leetcode.com/dontdude/"
                     title="LeetCode"
+                    aria-label="LeetCode"
                   >
-                    <button className="btn_shadow" aria-label="LeetCode">
-                      <img src={lt} alt="LeetCode" width="20" height="22" />
-                    </button>
+                    <span className="btn_shadow">
+                      <img src={lt} alt="LeetCode" width="22" height="22" />
+                    </span>
                   </a>
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://codeforces.com/profile/dontDude"
                     title="Codeforces"
+                    aria-label="Codeforces"
                   >
-                    <button className="btn_shadow" aria-label="Codeforces">
-                      <img src={cf} alt="Codeforces" width="20" height="22" />
-                    </button>
+                    <span className="btn_shadow">
+                      <img src={cf} alt="Codeforces" width="22" height="22" />
+                    </span>
                   </a>
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://auth.geeksforgeeks.org/user/dontdude/practice"
                     title="GeeksforGeeks"
+                    aria-label="GeeksforGeeks"
                   >
-                    <button className="btn_shadow" aria-label="GeeksforGeeks">
-                      <img src={gfg} alt="GeeksforGeeks" width="20" height="22" />
-                    </button>
+                    <span className="btn_shadow">
+                      <img src={gfg} alt="GeeksforGeeks" width="42" height="22" />
+                    </span>
                   </a>
                 </div>
               </div>

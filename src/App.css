@@ -99,9 +99,8 @@ button {
 .btn_shadow {
   padding: 18px 20px;
   border-radius: 6px;
-  transition: 0.3s all ease;
+  transition: all 0.3s ease;
   color: var(--title-color);
-  transition: 0.5s;
 }
 .btn_shadow {
   background: var(--card-bg);
@@ -109,9 +108,9 @@ button {
 }
 .btn_shadow:hover {
   background: var(--btn-hover);
-  /* background: linear-gradient(145deg, #6ab3e7, #f18686); */
+  box-shadow: 4px 4px 8px var(--shadow-1); /* Remove white highlight on hover */
   color: white;
-  transform: translateY(-10px);
+  transform: translateY(-5px); /* Reduced movement for smoother feel */
 }
 .box_shadow {
   background: var(--card-bg);

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense, lazy } from "react";
+import React, { useState, useEffect, useLayoutEffect, Suspense, lazy } from "react";
 import Header from "./components/header/Header.js";
 import Hero from "./components/home/Home.js";
 import "./App.css";
@@ -25,7 +25,7 @@ const App = () => {
     }
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     localStorage.setItem("theme", theme);
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);

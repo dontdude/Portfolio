@@ -43,7 +43,7 @@ const Header = ({ theme, toggleTheme }) => {
             <li><a href="#contact">CONTACT</a></li>
             <li>
               <button className='home-btn' onClick={toggleTheme} aria-label="Toggle Theme">
-                {theme === "dark" ? <i class="fas fa-sun"></i> : <i class="fas fa-moon"></i>}
+                {theme === "dark" ? <i className="fas fa-sun"></i> : <i className="fas fa-moon"></i>}
               </button>
             </li>
           </ul>

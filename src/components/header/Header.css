@@ -2,7 +2,9 @@ header {
     height: 90px;
     background-color: transparent;
     transition: 0.5s;
-    /* Removed line-height and vh to prevent shrinking on devtools open */
+    position: absolute; /* Overlay initially to prevent CLS when becoming fixed */
+    width: 100%;
+    z-index: 1000;
 }
 header .container{
     padding-top: 15px; /* Adjust if needed, or stick to flex centering */
@@ -32,7 +34,7 @@ header ul li a:hover {
     color:  var(--primary-color);
 }
 
-img {
+header img {
     height: 7vh;
     vertical-align: -2vh;
     /*negative vertical-align prop shifts element down */

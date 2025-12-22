@@ -132,7 +132,7 @@ const Features = () => {
 
               return (
                 <VerticalTimelineElement
-                  key={element.key}
+                  key={element.id}
                   date={element.date}
                   dateClassName="date"
                   iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
