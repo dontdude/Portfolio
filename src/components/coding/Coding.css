@@ -162,6 +162,14 @@
     color: var(--title-color);
     margin-bottom: 5px;
   }
+  .activity-title-link {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .activity-title-link:hover {
+    color: var(--primary-color);
+  }
   
   .activity-info p {
     font-size: 12px;

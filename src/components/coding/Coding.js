@@ -127,7 +127,11 @@ const Coding = () => {
                       data.recentAcSubmissionList.slice(0, 8).map((sub, index) => (
                           <div className="activity-item" key={index}>
                               <div className="activity-info">
-                                  <h4>{sub.title}</h4>
+                                  <h4>
+                                    <a href={`https://leetcode.com/problems/${sub.titleSlug}/`} target="_blank" rel="noopener noreferrer" className="activity-title-link">
+                                        {sub.title}
+                                    </a>
+                                  </h4>
                                   <p>Language: {sub.lang}</p>
                               </div>
                               <div className="activity-status">
