@@ -126,7 +126,8 @@ const Contact = () => {
                       <input type='email' name='email' value={data.email} onChange={InputEvent} aria-label="Email" required />
                     </div>
                     {/* Honeypot: Hidden for humans */}
-                    <div className='input check'>
+                    {/* Honeypot: Hidden for humans */}
+                    <div style={{ opacity: 0, position: 'absolute', top: 0, left: 0, height: 0, width: 0, zIndex: -1 }}>
                       <input type='text' name='company' value={data.company} onChange={InputEvent} tabIndex="-1" autoComplete="off" />
                     </div>
                   <div className='input'>
