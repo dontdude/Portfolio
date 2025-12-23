@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import contact from "../assets/contact.png"
 import "./Contact.css"
 //React Reveal
-import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
 // Email Js
 import emailjs from '@emailjs/browser';
 
@@ -53,7 +53,7 @@ const Contact = () => {
           <h1 className='title'>{title_name}</h1>
 
           <div className='content'>
-            <Fade left>
+            <Zoom bottom>
               <div className='left'>
                 <div className='box box_shadow'>
                   <div className='img'>
@@ -76,9 +76,9 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-            </Fade>
+            </Zoom>
 
-            <Fade right>
+            <Zoom bottom>
               <div className='right box_shadow'>
                 <form onSubmit={formSubmit}>
                     <div className='input'>
@@ -98,7 +98,7 @@ const Contact = () => {
                   </button>
                 </form>
               </div>
-            </Fade>
+            </Zoom>
           </div>
         </div>
       </section>

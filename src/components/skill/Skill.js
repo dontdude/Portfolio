@@ -4,7 +4,7 @@ import frontend from "../assets/frontend.jpg";
 import backend from "../assets/backend.jpg";
 import general from "../assets/general.jpg";
 
-import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Zoom";
 
 //TODO: Add image slider
 
@@ -17,7 +17,7 @@ const Skill = () => {
         <div className="skl">
           <h1 className="title">{title_name}</h1>
           <div className="skl-cont">
-            <Fade left>
+            <Zoom bottom>
               <div className="skl-card">
                 <img className="img-shadow" src={frontend} alt="Frontend" width="600" height="400" />
                 <h2 className="card-title">Frontend</h2>
@@ -29,8 +29,8 @@ const Skill = () => {
                   <li>Chrome DevTools, Service Workers</li>
                 </ul>
               </div>
-            </Fade>
-            <Fade bottom>
+            </Zoom>
+            <Zoom bottom>
               <div className="skl-card">
                 <img className="img-shadow" src={backend} alt="Backend" width="600" height="400" />
                 <h2 className="card-title">Backend</h2>
@@ -42,8 +42,8 @@ const Skill = () => {
                   <li>Git, GitHub, CI/CD</li>
                 </ul>
               </div>
-            </Fade>
-            <Fade right>
+            </Zoom>
+            <Zoom bottom>
               <div className="skl-card">
                 <img className="img-shadow" src={general} alt="System Design" width="600" height="400" />
                 <h2 className="card-title">System Design</h2>
@@ -55,7 +55,7 @@ const Skill = () => {
                   <li>GenAI, LLM Integration</li>
                 </ul>
               </div>
-            </Fade>
+            </Zoom>
           </div>
         </div>
       </section>

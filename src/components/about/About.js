@@ -5,7 +5,7 @@ import "./About.css";
 import Resume from "../assets/ChandanMishra_Resume.pdf";
 
 //React Reveal
-import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Zoom";
 
 // Timeline Component
 import TimelineData from "./timelineAPI";
@@ -33,7 +33,7 @@ const Features = () => {
         <div className="abt">
           <div className="abt-left">
             {/* <div className="abt-card bg"></div> */}
-            <Fade left>
+            <Zoom bottom>
               <div className="abt-card">
                 <img
                   className="abt-img img-shadow circle"
@@ -41,9 +41,9 @@ const Features = () => {
                   alt="Profile"
                 />
               </div>
-            </Fade>
+            </Zoom>
           </div>
-          <Fade right>
+          <Zoom bottom>
             <div className="abt-right">
               {/* <h1 className="title">{title_name}</h1> */}
               {/* <p className="abt-sub">&emsp; My code's so clean, it makes whitespace jealous. 🧹</p> */}
@@ -118,13 +118,13 @@ const Features = () => {
                 </button>
               </div>
             </div>
-          </Fade>
+          </Zoom>
         </div>
 
         {/*------------------------------ Timeline Component ------------------------------ */}
         <div className="timeline">
           <h1 className="title">Timeline</h1>
-          <VerticalTimeline>
+          <VerticalTimeline animate={ false }>
             {TimelineData.map((element) => {
               let isWorkIcon = element.icon === "work";
 
@@ -136,28 +136,30 @@ const Features = () => {
                   iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
                   icon={isWorkIcon ? <WorkIcon /> : <SchoolIcon />}
                 >
-                  <h3 className="vertical-timeline-element-title">
-                    {element.link ? (
-                      <a href={element.link} className="text-primary">
-                        {element.title}{" "}
-                        <sup>
-                          <i className="fas fa-external-link-alt fa-xs"></i>
-                        </sup>
-                      </a>
-                    ) : (
-                      element.title
-                    )}
-                  </h3>
-                  <h5 className="vertical-timeline-element-subtitle">
-                    {element.location}
-                  </h5>
-                  <p className="description">{element?.desc1}</p>
-                  <p className="description">{element?.desc2}</p>
-                  <p className="description">{element?.desc3}</p>
-                  <p className="description">{element?.desc4}</p>
-                  <p className="description">{element?.desc5}</p>
-                  <p className="description">{element?.desc6}</p>
-                  <p className="description">{element?.desc7}</p>
+                  <Zoom bottom>
+                    <h3 className="vertical-timeline-element-title">
+                      {element.link ? (
+                        <a href={element.link} className="text-primary">
+                          {element.title}{" "}
+                          <sup>
+                            <i className="fas fa-external-link-alt fa-xs"></i>
+                          </sup>
+                        </a>
+                      ) : (
+                        element.title
+                      )}
+                    </h3>
+                    <h5 className="vertical-timeline-element-subtitle">
+                      {element.location}
+                    </h5>
+                    <p className="description">{element?.desc1}</p>
+                    <p className="description">{element?.desc2}</p>
+                    <p className="description">{element?.desc3}</p>
+                    <p className="description">{element?.desc4}</p>
+                    <p className="description">{element?.desc5}</p>
+                    <p className="description">{element?.desc6}</p>
+                    <p className="description">{element?.desc7}</p>
+                  </Zoom>
                 </VerticalTimelineElement>
               );
             })}
