@@ -14,18 +14,20 @@
     /* background-color: red; */
     margin: 2rem 0;
 }
+/* Fix for React Reveal wrappers */
+.skl-cont > div,
 .skill-card-wrapper {
-    flex: 1 1 300px;
     display: flex !important;
     justify-content: center;
-    margin: 10px;
+    flex: 0 0 320px; /* Rigid width to force columns */
+    margin: 15px; 
+    box-sizing: border-box;
 }
 .skl-card{
-    width: 100%;
+    width: 100%; /* Fill wrapper */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 1.5rem 2rem;
     padding: 10px;
     border-radius: 10px;
     background: var(--card-bg);
@@ -46,16 +48,28 @@
     list-style:square;
 }
 .skl-card img {
-    height: 30vh;
-    width: auto; /* Ensure aspect ratio is preserved */
-    object-fit: contain;
+    height: 220px; /* Fixed height for uniformity */
+    width: 100%; /* Fill card */
+    object-fit: cover; /* No black bars */
+    border-radius: 10px;
 }
 @media (max-width: 768px) {
+    .skl-cont > div,
+    .skill-card-wrapper {
+        flex: 1 1 100%; /* Stack on mobile */
+        width: 100%;
+        margin: 10px 0;
+    }
+    .skl-card {
+        width: 90% !important; /* Uniform width on mobile */
+        margin: 0 auto;
+    }
     .skl-card li{
         font-size: 15px;
     }
     .skl-card img {
-        height: 25vh;
+        height: auto;
+        width: 100%;
         border-radius: 10px;
     }
 }

@@ -71,7 +71,7 @@ const Coding = () => {
   return (
     <section className="coding" id="coding">
       <div className="container">
-        <h2 className="title">{"< Problem Solving />"}</h2>
+        <h3 className="title">{"< Problem Solving />"}</h3>
         
         <div className="coding-cont">
            {/* Stats Card */}
@@ -116,9 +116,15 @@ const Coding = () => {
            {/* Recent Activity */}
            {showActivity && (
              <Zoom bottom>
-              <div className="activity-list">
-                  <h3 style={{marginBottom: '20px', fontSize: '20px'}}>Recent Activity</h3>
-                  {data.recentAcSubmissionList.slice(0, 8).map((sub, index) => (
+            <div className="activity-list">
+                <h3 style={{marginBottom: '20px', fontSize: '20px'}}>Recent Activity</h3>
+                <div className="activity-scroll">
+                  {loading ? (
+                      <p>Loading activity...</p>
+                  ) : error ? (
+                      <p>Unable to fetch activities.</p>
+                  ) : data.recentAcSubmissionList && data.recentAcSubmissionList.length > 0 ? (
+                      data.recentAcSubmissionList.slice(0, 8).map((sub, index) => (
                           <div className="activity-item" key={index}>
                               <div className="activity-info">
                                   <h4>{sub.title}</h4>
@@ -133,9 +139,12 @@ const Coding = () => {
                               </div>
                           </div>
                       ))
-                  }
-              </div>
-             </Zoom>
+                  ) : (
+                      <p>No recent activity found.</p>
+                  )}
+                </div>
+            </div>
+           </Zoom>
            )}
         </div>
       </div>

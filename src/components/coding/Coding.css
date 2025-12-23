@@ -116,6 +116,7 @@
   
   
   /* Recent Activity List */
+  /* Recent Activity List */
   .coding .activity-list {
     flex: 1.5;
     min-width: 350px;
@@ -123,15 +124,23 @@
     box-shadow: var(--box-shadow);
     border-radius: 20px;
     padding: 30px;
-    height: 400px; 
-    overflow-y: auto;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    /* overflow-y: auto; Moved to inner div */
     transition: 0.5s;
   }
+
+  .activity-scroll {
+      flex: 1;
+      overflow-y: auto;
+      padding-right: 10px; /* Prevent content hitting scrollbar */
+  }
   
-  .coding .activity-list::-webkit-scrollbar {
+  .activity-scroll::-webkit-scrollbar {
     width: 6px;
   }
-  .coding .activity-list::-webkit-scrollbar-thumb {
+  .activity-scroll::-webkit-scrollbar-thumb {
     background-color: var(--primary-color);
     border-radius: 10px;
   }
@@ -187,6 +196,9 @@
   }
   
   @media (max-width: 768px) {
+    .coding .title {
+        font-size: 2rem; /* Adjusted for mobile */
+    }
     .coding .coding-cont {
       flex-direction: column;
     }
