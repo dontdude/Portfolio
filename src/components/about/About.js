@@ -9,6 +9,7 @@ import Fade from "react-reveal/Fade";
 
 // Timeline Component
 import TimelineData from "./timelineAPI";
+import { LINKS } from "../../constants"; // Centralized Constants
 import { ReactComponent as WorkIcon } from "../assets/work.svg";
 import { ReactComponent as SchoolIcon } from "../assets/school.svg";
 import {
@@ -102,10 +103,7 @@ const Features = () => {
                   }}
                   onClick={() => {
                     // Redirect to resume link
-                    window.open(
-                      "https://drive.google.com/file/d/1uaR_ne8H6M-6nQQf88XmKXkSCEi--K_w/view?usp=sharing",
-                      "_blank"
-                    );
+                    window.open(LINKS.resume, "_blank");
                     // Trigger file download
                     const link = document.createElement("a");
                     link.href = Resume;

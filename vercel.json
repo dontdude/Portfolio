@@ -1,40 +1,32 @@
 {
-    "rewrites": [
-      {
-        "source": "/resume",
-        "destination": "https://drive.google.com/file/d/1SVcyvb-N9ZypHHrIArm_kYnBJwyuQoDM/view",
-        "statusCode": 301
-      },
-      {
-        "source": "/linkedin",
-        "destination": "https://www.linkedin.com/in/chandan-dontdude/",
-        "statusCode": 301
-      },
-      {
-        "source": "/github",
-        "destination": "https://github.com/dontdude",
-        "statusCode": 301
-      },
-      {
-        "source": "/leetcode",
-        "destination": "https://leetcode.com/dontdude/",
-        "statusCode": 301
-      },
-      {
-        "source": "/codeforces",
-        "destination": "https://codeforces.com/profile/dontDude",
-        "statusCode": 301
-      },
-      {
-        "source": "/gfg",
-        "destination": "https://auth.geeksforgeeks.org/user/dontdude/practice",
-        "statusCode": 301
-      },
-      {
-        "source": "/medium",
-        "destination": "https://medium.com/@dontdude",
-        "statusCode": 301
-      }
-    ]
-  }
-  
+  "rewrites": [
+    {
+      "source": "/resume",
+      "destination": "https://drive.google.com/file/d/1F-f6xfpSFAglxvcBIuT9rwrP765F-HTd/view?usp=sharing"
+    },
+    {
+      "source": "/linkedin",
+      "destination": "https://www.linkedin.com/in/chandan-dontdude/"
+    },
+    {
+      "source": "/github",
+      "destination": "https://github.com/dontdude"
+    },
+    {
+      "source": "/leetcode",
+      "destination": "https://leetcode.com/dontdude/"
+    },
+    {
+      "source": "/codeforces",
+      "destination": "https://codeforces.com/profile/dontDude"
+    },
+    {
+      "source": "/gfg",
+      "destination": "https://auth.geeksforgeeks.org/user/dontdude/practice"
+    },
+    {
+      "source": "/medium",
+      "destination": "https://medium.com/@dontdude"
+    }
+  ]
+}

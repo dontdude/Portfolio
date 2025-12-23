@@ -4,6 +4,7 @@ import cf from "../assets/cf.png";
 import lt from "../assets/lt.png";
 import gfg from "../assets/gfg.png";
 import { useTypewriter } from "react-simple-typewriter";
+import { LINKS } from "../../constants";
 
 //React reveal
 //import Fade from 'react-reveal/Fade';
@@ -43,7 +44,7 @@ const Home = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/chandan-dontdude/"
+                    href={LINKS.linkedin}
                     title="LinkedIn"
                   >
                     <button className="btn_shadow" aria-label="LinkedIn">
@@ -53,7 +54,7 @@ const Home = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://github.com/dontdude"
+                    href={LINKS.github}
                     title="GitHub"
                   >
                     <button className="btn_shadow" aria-label="GitHub">
@@ -63,7 +64,7 @@ const Home = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://medium.com/@dontdude"
+                    href={LINKS.medium}
                     title="Medium"
                   >
                     <button className="btn_shadow" aria-label="Medium">
@@ -73,7 +74,7 @@ const Home = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://leetcode.com/dontdude/"
+                    href={LINKS.leetcode}
                     title="LeetCode"
                     aria-label="LeetCode"
                   >
@@ -84,7 +85,7 @@ const Home = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://codeforces.com/profile/dontDude"
+                    href={LINKS.codeforces}
                     title="Codeforces"
                     aria-label="Codeforces"
                   >
@@ -95,7 +96,7 @@ const Home = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://auth.geeksforgeeks.org/user/dontdude/practice"
+                    href={LINKS.gfg}
                     title="GeeksforGeeks"
                     aria-label="GeeksforGeeks"
                   >
