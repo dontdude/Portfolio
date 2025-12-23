@@ -17,7 +17,7 @@ const Skill = () => {
         <div className="skl">
           <h1 className="title">{title_name}</h1>
           <div className="skl-cont">
-            <Zoom bottom>
+            <Zoom bottom className="skill-card-wrapper">
               <div className="skl-card">
                 <img className="img-shadow" src={frontend} alt="Frontend" width="600" height="400" />
                 <h2 className="card-title">Frontend</h2>
@@ -30,7 +30,7 @@ const Skill = () => {
                 </ul>
               </div>
             </Zoom>
-            <Zoom bottom>
+            <Zoom bottom className="skill-card-wrapper">
               <div className="skl-card">
                 <img className="img-shadow" src={backend} alt="Backend" width="600" height="400" />
                 <h2 className="card-title">Backend</h2>
@@ -43,7 +43,7 @@ const Skill = () => {
                 </ul>
               </div>
             </Zoom>
-            <Zoom bottom>
+            <Zoom bottom className="skill-card-wrapper">
               <div className="skl-card">
                 <img className="img-shadow" src={general} alt="System Design" width="600" height="400" />
                 <h2 className="card-title">System Design</h2>

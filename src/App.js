@@ -8,6 +8,7 @@ import StarCanvas from "./components/StarCanvas";
 // Lazy Load components below the fold for performance
 const About = lazy(() => import("./components/about/About.js"));
 const Skill = lazy(() => import("./components/skill/Skill.js"));
+const Coding = lazy(() => import("./components/coding/Coding.js"));
 const Projects = lazy(() => import("./components/projects/Projects.js"));
 const Contact = lazy(() => import("./components/contact/Contact.js"));
 const Footer = lazy(() => import("./components/footer/Footer.js"));
@@ -44,6 +45,8 @@ const App = () => {
         <About />
         <hr />
         <Skill />
+        <hr />
+        <Coding />
         <hr />
         <Projects />
         <hr />
