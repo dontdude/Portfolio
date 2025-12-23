@@ -57,6 +57,7 @@ header h2 a {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: 0.3s ease;
+    white-space: nowrap; /* Prevent glitch text from wrapping */
 }
 
 header h2 a:hover {
@@ -167,7 +168,25 @@ header h2 a:hover {
         line-height: 60px;
     }
     .header.active {
-        height: 11vh;
+        height: 12vh; /* Slightly taller for mobile touch targets */
+    }
+
+    /* Mobile Header Fixes */
+    header .container {
+        padding-top: 0; /* Remove padding that pushes logo down */
+        height: 100%; /* Ensure container fills header for centering */
+        padding-left: 20px; /* Prevent sticking to left edge */
+        padding-right: 20px; /* Prevent sticking to right edge */
+    }
+
+    header h2 a {
+        font-size: 20px; /* Smaller logo text for mobile */
+    }
+    
+    .close,
+    .open {
+        right: 25px; /* Adjust right spacing */
+        /* Vertical center is already handled by top: 50% + translateY(-50%) */
     }
 }
 

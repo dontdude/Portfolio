@@ -32,7 +32,7 @@ const Header = ({ theme, toggleTheme }) => {
       <div className="container d_flex">
        <div className="logo">
          <h2>
-           <a href="#home" className="logo-text">
+           <a href="#home" className="logo-text glitch" data-text="<dontdude/>">
              &lt;dontdude/&gt;<span className="terminal-cursor">_</span>
            </a>
          </h2>

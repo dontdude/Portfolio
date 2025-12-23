@@ -31,7 +31,7 @@ const Home = () => {
           {/* left area */}
           <div className="left top">
             <h1>
-              Hey👋, I’m <span>Chandan Mishra👨🏻‍💻</span>
+              Hey👋, I’m <span className="glitch" data-text="Chandan Mishra👨🏻‍💻">Chandan Mishra👨🏻‍💻</span>
             </h1>
             <h2 className="typewriter-wrapper">
               a <span>{text}</span>
