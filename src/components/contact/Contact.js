@@ -10,6 +10,7 @@ const Contact = () => {
     name: "",
     email: "",
     message: "",
+    company: "", // Honeypot Field
   })
   const [status, setStatus] = useState({ type: '', message: '' });
   const mountTime = useRef(Date.now());
@@ -123,6 +124,10 @@ const Contact = () => {
                     <div className='input'>
                       <span>YOUR EMAIL </span>
                       <input type='email' name='email' value={data.email} onChange={InputEvent} aria-label="Email" required />
+                    </div>
+                    {/* Honeypot: Hidden for humans */}
+                    <div className='input check'>
+                      <input type='text' name='company' value={data.company} onChange={InputEvent} tabIndex="-1" autoComplete="off" />
                     </div>
                   <div className='input'>
                     <span>YOUR MESSAGE </span>

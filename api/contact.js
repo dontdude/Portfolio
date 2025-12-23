@@ -18,7 +18,18 @@ const sanitize = (str) => {
 module.exports = async (req, res) => {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
-  const { name, email, message, sourceUrl, meta = {} } = req.body;
+  const { name, email, message, company, sourceUrl, meta = {} } = req.body;
+
+  // Anti-Spam: Honeypot Check (If 'company' is filled, it's a bot)
+  if (company) {
+    return res.status(200).json({ success: true, message: 'Sent!' }); // Fake success
+  }
+
+  // Anti-Spam: Speed Check (Humans take > 2 seconds)
+  const seconds = parseInt((meta.timeOnPage || '0').split(' ')[0]); // "10 seconds" -> 10
+  if (seconds < 2) {
+    return res.status(429).json({ error: 'Too fast! Please relax.' });
+  }
 
   if (!name || !email || !message) {
     return res.status(400).json({ error: 'Missing required fields' });
