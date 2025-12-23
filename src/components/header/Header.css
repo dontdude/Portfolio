@@ -120,23 +120,34 @@ header h2 a:hover {
         padding-top: 30px;
     }
     .nav-links-mobile {
-        position: absolute;
-        display: block;
-        list-style: none;
-        box-shadow: rgba(50, 50, 93, 0.23) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
         left: 0;
         top: 0;
-        transition: all 0.5s ease-in-out;
-        width: 60%;
+        width: 100%;
         height: 100vh;
-        background-color: var(--body-bg);
+        background: var(--body-bg); /* Fallback */
+        background: var(--card-bg); /* Use themed card background */
         z-index: 888;
+        animation: slideIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards; /* Smooth easeOut */
+        box-shadow: none;
     }
+
+    @keyframes slideIn {
+        0% { transform: translateX(-100%); opacity: 0; }
+        100% { transform: translateX(0); opacity: 1; }
+    }
+
     header ul li {
         width: 100%;
+        text-align: center;
         transition: all 0.5s ease-in-out;
         text-transform: uppercase;
-        line-height: 70px;
+        /* line-height: 70px; Removed to let flex gap handle spacing */
     }
      
     /* Reason why nav link won't appear on small screen initially */

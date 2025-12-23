@@ -1,34 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./Header.css";
 import Music from "../common/Music";
-// import logo from "../assets/logo.png";
-const logo = "https://avatars.githubusercontent.com/u/75321407?s=200";
 
 const Header = ({ theme, toggleTheme }) => {
+  const [mobile, setMobile] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  // when we scroll, what header looks like
-  window.addEventListener("scroll", function () {
-    const header = document.querySelector(".header")           //element with class "header" selected
-    header.classList.toggle("active", window.scrollY > 100)   // active class is added and removed because of classList.toggle
-  }) 
-
-  // toggle state
-  const [ismobile, setMobile] = useState(false);
-
-  // changes value of mobile state, according to type of screen
-  // useEffect(() => {
-  //   const userAgent = typeof window.navigator === 'undefined' ? '' : navigator.userAgent;
-  //   const mobile = Boolean(
-  //    userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i),
-  //   );
-  //   setMobile(mobile);
-  // }, []);
-
-  console.log(ismobile);
+  // Optimized Scroll Listener
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
-     <header className="header">
+     <header className={scrolled ? "header active" : "header"}>
       <div className="container d_flex">
        <div className="logo">
          <h2>
@@ -39,27 +28,25 @@ const Header = ({ theme, toggleTheme }) => {
        </div>
 
        <div className="navlink">
-          {/* link tag is responsible for no appearance of nav link on small screen initially */}
-          <ul className={ismobile ? "nav-links-mobile" : "link f_flex uppercase"}>
+          <ul className={mobile ? "nav-links-mobile" : "link f_flex uppercase"} onClick={() => setMobile(false)}>
             <li><a href="#home">HOME</a></li>
             <li><a href="#about">ABOUT ME</a></li>
             <li><a href="#skill">SKILLS</a></li>
             <li><a href="#project">PROJECTS</a></li>
             <li><a href="#contact">CONTACT</a></li>
-            <li>
+            {/* Stop propagation for interactive elements so menu stays open */}
+            <li onClick={(e) => e.stopPropagation()}>
               <Music />
             </li>
-            <li>
+            <li onClick={(e) => e.stopPropagation()}>
               <button className='home-btn' onClick={toggleTheme} aria-label="Toggle Theme">
                 {theme === "dark" ? <i className="fas fa-sun"></i> : <i className="fas fa-moon"></i>}
               </button>
             </li>
           </ul>
 
-          <button className='toggle' onClick={() => setMobile(!ismobile)} aria-label="Toggle Menu">
-            {/* to understand why button is not visible in larger screen, read "open", "close" styles in header.css */}
-            {ismobile ? <i className='fas fa-times close home-btn'></i> : <i className='fas fa-bars open'></i>}
-            {/* fa-times fa-bars, classes from font awesome, link in index.html */}
+          <button className='toggle' onClick={() => setMobile(!mobile)} aria-label="Toggle Menu">
+            {mobile ? <i className='fas fa-times close home-btn'></i> : <i className='fas fa-bars open'></i>}
           </button>
        </div>
       </div>
