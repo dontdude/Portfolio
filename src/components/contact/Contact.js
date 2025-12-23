@@ -3,8 +3,6 @@ import contact from "../assets/contact.png"
 import "./Contact.css"
 //React Reveal
 import Zoom from 'react-reveal/Zoom';
-// Email Js
-import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [data, setData] = useState({
@@ -25,27 +23,30 @@ const Contact = () => {
 
   const title_name = "< Contact Me />";
 
-   // Added Email.JS to send the form details to email 
-  const formSubmit = (event) => {
+  const formSubmit = async (event) => {
     event.preventDefault()
-    alert(
-      `Name : ${data.name}
-	   Email : ${data.email}
-	   Message : ${data.message}`,
-    )
-    emailjs.sendForm('service_aonqi4q', 'template_y572oei', event.target, 'kT0FQGetZcI5jNFu4')
-      .then((result) => {
-          console.log(result.text);
-          alert('Thanks for contacting me, Message Successfully sent.');
-      }, (error) => {
-          console.log(error.text);
-          alert('Sorry! There was some error while sending message right now, use other provided method to contact me.');
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
       });
-
-      event.target.reset();
+      
+      if (response.ok) {
+        alert('Thanks for contacting me, Message Successfully sent.');
+        setData({ name: "", email: "", message: "" });
+      } else {
+        alert('Sorry! There was some error while sending message right now.');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('Error sending message. Please try again later.');
+    }
   }
 
- 
   return (
     <>
       <section className='Contact' id='contact'>
@@ -83,15 +84,15 @@ const Contact = () => {
                 <form onSubmit={formSubmit}>
                     <div className='input'>
                       <span>YOUR NAME</span>
-                      <input type='text' name='name' value={data.name} onChange={InputEvent} aria-label="Name" />
+                      <input type='text' name='name' value={data.name} onChange={InputEvent} aria-label="Name" required />
                     </div>
                     <div className='input'>
                       <span>YOUR EMAIL </span>
-                      <input type='email' name='email' value={data.email} onChange={InputEvent} aria-label="Email" />
+                      <input type='email' name='email' value={data.email} onChange={InputEvent} aria-label="Email" required />
                     </div>
                   <div className='input'>
                     <span>YOUR MESSAGE </span>
-                    <textarea cols='30' rows='10' name='message' value={data.message} onChange={InputEvent} aria-label="Message"></textarea>
+                    <textarea cols='30' rows='10' name='message' value={data.message} onChange={InputEvent} aria-label="Message" required></textarea>
                   </div>
                   <button className='btn_shadow'>
                     SEND <i class='fas fa-arrow-right'></i>
