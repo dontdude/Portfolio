@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import contact from "../assets/contact.png"
 import "./Contact.css"
 //React Reveal
@@ -12,6 +12,7 @@ const Contact = () => {
     message: "",
   })
   const [status, setStatus] = useState({ type: '', message: '' });
+  const mountTime = useRef(Date.now());
 
   const InputEvent = (event) => {
     const { name, value } = event.target
@@ -31,12 +32,30 @@ const Contact = () => {
     setStatus({ type: 'loading', message: '' }); // Only toggle button state, hide message
     
     try {
+      // Advanced Lead Intelligence
+      const timeOnPage = Math.round((Date.now() - mountTime.current) / 1000);
+      const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+      
+      const meta = {
+        userAgent: navigator.userAgent,
+        screen: `${window.screen.width}x${window.screen.height}`,
+        language: navigator.language,
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        referrer: document.referrer || 'Direct',
+        
+        // Hardware & Behavior
+        ram: navigator.deviceMemory ? `~${navigator.deviceMemory} GB` : 'Unknown',
+        cores: navigator.hardwareConcurrency || 'Unknown',
+        network: connection ? connection.effectiveType : 'Unknown',
+        timeOnPage: `${timeOnPage} seconds`
+      };
+
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ ...data, sourceUrl: window.location.href })
+        body: JSON.stringify({ ...data, sourceUrl: window.location.href, meta })
       });
       
       if (response.ok) {

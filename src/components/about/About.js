@@ -10,6 +10,7 @@ import Zoom from "react-reveal/Zoom";
 // Timeline Component
 import TimelineData from "./timelineAPI";
 import { LINKS } from "../../constants"; // Centralized Constants
+import { trackEvent } from "../../utils/analytics";
 import { ReactComponent as WorkIcon } from "../assets/work.svg";
 import { ReactComponent as SchoolIcon } from "../assets/school.svg";
 import {
@@ -102,6 +103,9 @@ const Features = () => {
                     justifyContent: "center",
                   }}
                   onClick={() => {
+                    // Track Download
+                    trackEvent('Resume Downloaded');
+
                     // Redirect to resume link
                     window.open(LINKS.resume, "_blank");
                     // Trigger file download

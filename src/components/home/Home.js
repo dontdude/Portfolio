@@ -5,6 +5,7 @@ import lt from "../assets/lt.png";
 import gfg from "../assets/gfg.png";
 import { useTypewriter } from "react-simple-typewriter";
 import { LINKS } from "../../constants";
+import { trackEvent } from "../../utils/analytics";
 
 //React reveal
 //import Fade from 'react-reveal/Fade';
@@ -45,6 +46,7 @@ const Home = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     href={LINKS.linkedin}
+                    onClick={() => trackEvent('LinkedIn Click')}
                     title="LinkedIn"
                   >
                     <button className="btn_shadow" aria-label="LinkedIn">
@@ -55,6 +57,7 @@ const Home = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     href={LINKS.github}
+                    onClick={() => trackEvent('GitHub Click')}
                     title="GitHub"
                   >
                     <button className="btn_shadow" aria-label="GitHub">
@@ -65,6 +68,7 @@ const Home = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     href={LINKS.medium}
+                    onClick={() => trackEvent('Medium Click')}
                     title="Medium"
                   >
                     <button className="btn_shadow" aria-label="Medium">
@@ -75,6 +79,7 @@ const Home = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     href={LINKS.leetcode}
+                    onClick={() => trackEvent('LeetCode Click')}
                     title="LeetCode"
                     aria-label="LeetCode"
                   >
@@ -86,6 +91,7 @@ const Home = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     href={LINKS.codeforces}
+                    onClick={() => trackEvent('Codeforces Click')}
                     title="Codeforces"
                     aria-label="Codeforces"
                   >
@@ -97,6 +103,7 @@ const Home = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     href={LINKS.gfg}
+                    onClick={() => trackEvent('GFG Click')}
                     title="GeeksforGeeks"
                     aria-label="GeeksforGeeks"
                   >
