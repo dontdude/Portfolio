@@ -3,12 +3,15 @@ import contact from "../assets/contact.png"
 import "./Contact.css"
 //React Reveal
 import Zoom from 'react-reveal/Zoom';
+import confetti from 'canvas-confetti';
 
 const Contact = () => {
   const [data, setData] = useState({
     name: "",
     email: "",
-    message: "",})
+    message: "",
+  })
+  const [status, setStatus] = useState({ type: '', message: '' });
 
   const InputEvent = (event) => {
     const { name, value } = event.target
@@ -25,6 +28,7 @@ const Contact = () => {
 
   const formSubmit = async (event) => {
     event.preventDefault()
+    setStatus({ type: 'loading', message: '' }); // Only toggle button state, hide message
     
     try {
       const response = await fetch('/api/contact', {
@@ -32,18 +36,29 @@ const Contact = () => {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify({ ...data, sourceUrl: window.location.href })
       });
       
       if (response.ok) {
-        alert('Thanks for contacting me, Message Successfully sent.');
+        setStatus({ type: 'success', message: 'Message sent successfully! I will get back to you soon.' });
         setData({ name: "", email: "", message: "" });
+        
+        // Celebration!
+        confetti({
+          particleCount: 150,
+          spread: 70,
+          origin: { y: 0.6 },
+          colors: ['#2ecc71', '#3498db', '#e74c3c', '#f1c40f']
+        });
+
+        // Clear success message after 10 seconds
+        setTimeout(() => setStatus({ type: '', message: '' }), 10000);
       } else {
-        alert('Sorry! There was some error while sending message right now.');
+        throw new Error('Server returned error');
       }
     } catch (error) {
       console.error(error);
-      alert('Error sending message. Please try again later.');
+      setStatus({ type: 'error', message: 'Failed to send message. Please try again.' });
     }
   }
 
@@ -94,9 +109,14 @@ const Contact = () => {
                     <span>YOUR MESSAGE </span>
                     <textarea cols='30' rows='10' name='message' value={data.message} onChange={InputEvent} aria-label="Message" required></textarea>
                   </div>
-                  <button className='btn_shadow'>
-                    SEND <i class='fas fa-arrow-right'></i>
+                  <button className='btn_shadow' disabled={status.type === 'loading'}>
+                    {status.type === 'loading' ? 'SENDING...' : <>SEND <i class='fas fa-arrow-right'></i></>}
                   </button>
+                  {status.message && (
+                    <div className={`status_msg ${status.type}`}>
+                      {status.message}
+                    </div>
+                  )}
                 </form>
               </div>
             </Zoom>
