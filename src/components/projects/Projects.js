@@ -2,16 +2,26 @@ import React from 'react'
 import './Projects.css'
 import Card from "./Card"
 import ProjectsAPI from "./ProjectsAPI.js"
-
+import FeaturedProject from './FeaturedProject'
+import FeaturedProjectsData from './projectsData'
 
 const Projects = () => {
-  
   const ProjectsData = ProjectsAPI();
-  const title_name = "< Projects />"
+
   return (
     <>
-     <section className='Prj' id='project'>
-          <h1 className='title'>{title_name}</h1>
+      <section className='Prj' id='project'>
+          <h1 className='title'>{"< Featured Projects />"}</h1>
+          
+          {/* Render Featured Projects (Goxec, NyaySetu) */}
+          {FeaturedProjectsData.map((project) => (
+             <FeaturedProject key={project.id} project={project} />
+          ))}
+
+          {/* GitHub Repos Section */}
+          <h2 style={{marginTop: '50px', marginBottom: '20px', fontSize: '1.5rem', color: 'var(--text-color)'}}>
+              Other Noteworthy Projects
+          </h2>
 
             <div className='Prj-container'>
               {ProjectsData.map((project, index) => {
@@ -29,8 +39,8 @@ const Projects = () => {
                         />
               })}
             </div>
-          <a target="_blank" rel="noopener noreferrer" className="btn_shadow" href="https://github.com/dontdude"><span>View All </span>
-              <i class="fas fa-chevron-right"></i>
+          <a target="_blank" rel="noopener noreferrer" className="btn_shadow" href="https://github.com/dontdude"><span>View All on GitHub </span>
+              <i className="fas fa-chevron-right"></i>
           </a>
       </section>
     </>

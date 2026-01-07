@@ -191,4 +191,274 @@ color: var(--primary-color);
 div.card-btn,  .dtl-btn{
     font-size: 13px;
 }
+
+/* Featured Project Mobile */
+.Featured-content {
+    flex-direction: column;
+}
+.Featured-left, .Featured-right {
+    width: 100%;
+    padding: 10px;
+}
+.Featured-img-container {
+    height: 250px;
+}
+}
+
+
+/* ---------------- Featured Projects Styles ---------------- */
+
+.Featured-card {
+    width: 90%;
+    margin: 3rem auto;
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.Featured-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.Featured-left {
+    flex: 1.2;
+}
+
+.Featured-right {
+    flex: 1;
+}
+
+/* Image Container - Thumbnail */
+.Featured-img-container {
+    width: 100%;
+    height: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+    /* Premium Look: Cover fills the area, Top alignment usually gets the header of the site/diagram */
+    background: var(--body-bg); 
+}
+
+.Featured-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: top center; /* Focus on the top part of the diagram/screenshot */
+    transition: transform 0.5s ease;
+}
+
+.Featured-img-container:hover .Featured-img {
+    transform: scale(1.03);
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: 0.3s;
+    backdrop-filter: blur(3px);
+}
+
+.Featured-img-container:hover .img-overlay {
+    opacity: 1;
+}
+
+/* Text Content */
+.Featured-category {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.Featured-header h2 {
+    font-size: 2.2rem;
+    margin: 10px 0 20px 0;
+    font-weight: 700;
+}
+
+.Featured-desc {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: var(--text-color);
+    opacity: 0.95;
+    text-align: justify;
+}
+
+/* Features List */
+.Featured-features {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.Featured-features li {
+    margin-bottom: 12px;
+    font-size: 15px;
+    display: flex;
+    align-items: start;
+}
+
+.Featured-features i {
+    color: var(--primary-color);
+    margin-right: 12px;
+    margin-top: 5px;
+}
+
+/* Tech Stack */
+.Featured-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.tech-tag {
+    background: var(--body-bg);
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    box-shadow: var(--inner-shadow);
+    color: var(--text-color);
+    font-weight: 500;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Actions */
+.Featured-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.Featured-actions a {
+    padding: 14px 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    white-space: nowrap;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.Featured-actions a:hover {
+    transform: translateY(-3px);
+}
+
+/* ---------------- Modal Styles (Fixed) ---------------- */
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent; /* Overlay handles bg */
+}
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.85); /* Darker overlay */
+    backdrop-filter: blur(5px);
+    z-index: 10001;
+}
+
+.modal-content-img {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    z-index: 10002;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modal-content-img img {
+    max-width: 100%;
+    max-height: 85vh; /* Leave room for button */
+    border-radius: 8px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    object-fit: contain;
+    background: #000; /* Ensure diagram bg is dark */
+}
+
+.modal-content-img .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    z-index: 10003;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+}
+.modal-content-img .close-modal:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .Featured-img-container {
+        height: 220px; /* Reduced height for mobile */
+    }
+    
+    .Featured-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .modal-content-img {
+        width: 100vw;
+    }
+    
+    .modal-content-img img {
+        max-width: 95%;
+        max-height: 80vh;
+    }
+    
+    .modal-content-img .close-modal {
+        top: -50px; /* Push above image on mobile if needed, or keep inside */
+        right: 10px;
+        background: rgba(255,255,255,0.3);
+    }
 }
