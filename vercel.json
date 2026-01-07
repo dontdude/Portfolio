@@ -2,7 +2,11 @@
   "rewrites": [
     {
       "source": "/resume",
-      "destination": "https://drive.google.com/file/d/1F-f6xfpSFAglxvcBIuT9rwrP765F-HTd/view?usp=sharing"
+      "destination": "https://drive.google.com/file/d/1kjdDO5u6ywvHLU2ozIiR1snS5URR9Xnz/view"
+    },
+    {
+      "source": "/resume-india",
+      "destination": "https://drive.google.com/file/d/1TJBvqi9wSMtO8u5JOlmbLB3Xf5ZDpg4Y/view"
     },
     {
       "source": "/linkedin",

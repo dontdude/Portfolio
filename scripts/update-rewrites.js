@@ -7,6 +7,7 @@ const VERCEL_CONFIG_PATH = path.join(__dirname, '../vercel.json');
 // Define mappings from LINKS keys to Vercel rewrite sources
 const REWRITE_MAPPINGS = {
   resume: '/resume',
+  resume_india: '/resume-india',
   linkedin: '/linkedin',
   github: '/github',
   leetcode: '/leetcode',

@@ -15,9 +15,10 @@ const LINKS = {
   gfg: "https://auth.geeksforgeeks.org/user/dontdude/practice",
   medium: "https://medium.com/@dontdude",
 
-  // Resume (Single Source of Truth)
-  // Updating this link will automatically update vercel.json rewrites via the sync script.
-  resume: "https://drive.google.com/file/d/1F-f6xfpSFAglxvcBIuT9rwrP765F-HTd/view?usp=sharing",
+  // Resume Links (Dynamic Serving)
+  // Default is International. India specific link is used based on timezone.
+  resume: "https://drive.google.com/file/d/1kjdDO5u6ywvHLU2ozIiR1snS5URR9Xnz/view", // International
+  resume_india: "https://drive.google.com/file/d/1TJBvqi9wSMtO8u5JOlmbLB3Xf5ZDpg4Y/view", // India
 };
 
 module.exports = { LINKS };

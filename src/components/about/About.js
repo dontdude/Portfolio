@@ -2,7 +2,8 @@ import React from "react";
 import "./About.css";
 // import logo from "../assets/logo.png";
 //import Resume from "../assets/Resume_ChandanMishra.pdf";
-import Resume from "../assets/ChandanMishra_Resume.pdf";
+import ResumeIntl from "../assets/ChandanMishra_Resume.pdf";
+import ResumeIndia from "../assets/ChandanMishra_Resume_SDE.pdf";
 
 //React Reveal
 import Zoom from "react-reveal/Zoom";
@@ -26,6 +27,27 @@ const Features = () => {
   const title_name = "< About me />";
   const workIconStyles = { background: "#06D6A0" };
   const schoolIconStyles = { background: "#f9c74f" };
+
+  // Dynamic Resume Logic
+  const getResumeData = () => {
+    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    // Check for Indian timezones
+    if (timeZone === 'Asia/Calcutta' || timeZone === 'Asia/Kolkata') {
+        return {
+            pdf: ResumeIndia,
+            link: LINKS.resume_india,
+            name: "ChandanMishra_Resume_SDE.pdf"
+        };
+    }
+    // Default to International
+    return {
+        pdf: ResumeIntl,
+        link: LINKS.resume,
+        name: "ChandanMishra_Resume.pdf"
+    };
+  };
+
+  const resumeData = getResumeData();
 
   return (
     <>
@@ -54,25 +76,21 @@ const Features = () => {
               </p>
               <p className="abt-desc">
                 {" "}
-                &emsp; I am a <span>Software Engineer</span>{" "}
-                specializing in building <span>scalable, high-performance web systems</span>. 
-                My focus goes beyond writing code—I <span>architect end-to-end solutions</span> that 
-                drive measurable business impact and operational efficiency.
+                &emsp; I engineer <span>robust distributed systems</span> and <span>high-performance frontend interfaces</span>. 
+                My expertise lies in bridging the gap between scalable backend architecture (Go, Kafka, Microservices) and 
+                responsive user experiences (React, TypeScript).
               </p>{" "}
               <p className="abt-desc">
                 {" "}
-                &emsp; With deep expertise in <span>React, TypeScript, and Node.js</span>, backed by a strong 
-                foundation in <span>System Design</span> and <span>Backend Infrastructure</span> (Kafka, Python, SQL), 
-                I bridge the gap between elegant interfaces and robust server-side logic. I excel at 
-                <span>optimizing complex workflows</span>, reducing latency, and building infrastructure that scales 
-                with user demand.
+                &emsp; With a strong foundation in <span>System Design</span>, I don't just write code—I <span>architect solutions</span>. 
+                Whether it's optimizing database queries to slash load by 40% or designing fault-tolerant distributed execution engines, 
+                I build systems that are <span>reliable, maintainable, and efficient</span>.
               </p>{" "}
               <p className="abt-desc">
                 {" "}
-                &emsp; Beyond individual contribution, I thrive on <span>technical leadership</span>—establishing 
-                engineering standards, driving <span>architectural excellence</span>, and mentoring teams. 
-                I treat every project with ownership, ensuring that technological choices translate directly into 
-                <span>long-term value</span>.{" "}
+                &emsp; I treat engineering as a craft. From establishing strict <span>TypeScript standards</span> to mentoring teams on 
+                architectural patterns, I drive <span>technical excellence</span>. I thrive on solving complex problems where off-the-shelf 
+                solutions fall short, ensuring that every technological choice translates directly into <span>long-term business value</span>.
               </p>{" "}
               <p className="abt-desc">
                 {" "}
@@ -107,11 +125,11 @@ const Features = () => {
                     trackEvent('Resume Downloaded');
 
                     // Redirect to resume link
-                    window.open(LINKS.resume, "_blank");
+                    window.open(resumeData.link, "_blank");
                     // Trigger file download
                     const link = document.createElement("a");
-                    link.href = Resume;
-                    link.download = "ChandanMishra_Resume.pdf"; // file name
+                    link.href = resumeData.pdf;
+                    link.download = resumeData.name; // file name
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
