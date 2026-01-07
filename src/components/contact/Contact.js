@@ -4,6 +4,53 @@ import "./Contact.css"
 //React Reveal
 import Zoom from 'react-reveal/Zoom';
 import confetti from 'canvas-confetti';
+import { trackEvent } from "../../utils/analytics";
+
+/**
+ * Reusable component for Copy-to-Clipboard functionality
+ * Tracks the copy event and shows a tooltip
+ */
+const CopyableText = ({ text, label }) => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(text);
+    trackEvent(`Copied ${label}`);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <span 
+      onClick={handleCopy} 
+      className="copyable-text" 
+      title="Click to Copy" 
+      style={{ cursor: 'pointer', position: 'relative', borderBottom: '1px dashed #777' }}
+    >
+      {text}
+      <i className="far fa-copy" style={{ marginLeft: '8px', fontSize: '0.9em', color: '#06D6A0' }}></i>
+      
+      {/* Tooltip */}
+      {copied && (
+        <span style={{
+          position: 'absolute',
+          top: '-25px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          background: '#06D6A0',
+          color: '#fff',
+          padding: '2px 6px',
+          borderRadius: '4px',
+          fontSize: '10px',
+          whiteSpace: 'nowrap',
+          zIndex: 10
+        }}>
+          Copied!
+        </span>
+      )}
+    </span>
+  );
+};
 
 const Contact = () => {
   const [data, setData] = useState({
@@ -98,8 +145,8 @@ const Contact = () => {
                   <div className='details'>
                    <h1>Get In Touch!</h1>
                     <p>I am actively seeking SDE-2 / Senior Software Engineering roles where I can drive architectural decisions and build high-performance distributed systems. If you're looking for an engineer who prioritizes scalability and business impact, let's connect.</p> <br />
-                    <p><span>Phone</span>: +91 7011125038</p>
-                    <p><span>Email</span>: mishrachandan.dd@gmail.com</p>
+                    <p><span>Phone</span>: <CopyableText text="+91 7011125038" label="Phone" /></p>
+                    <p><span>Email</span>: <CopyableText text="mishrachandan.dd@gmail.com" label="Email" /></p>
                     <p><span>Address</span>: Noida, Uttar Pradesh, India</p> <br />
                     <div className="card-btn">
                         <a target="_blank" rel="noopener noreferrer" className="btn_shadow" href="https://t.me/dd215412" aria-label="Chat on Telegram">
