@@ -4,6 +4,7 @@ import Hero from "./components/home/Home.js";
 import "./App.css";
 import AnimatedCursor from "react-animated-cursor";
 import StarCanvas from "./components/StarCanvas";
+import { trackEvent } from "./utils/analytics";
 
 // Lazy Load components below the fold for performance
 const About = lazy(() => import("./components/about/About.js"));
@@ -30,6 +31,15 @@ const App = () => {
     localStorage.setItem("theme", theme);
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
+
+  useEffect(() => {
+    // Passive Tracking: Record visit once per session
+    const hasVisited = sessionStorage.getItem('visited');
+    if (!hasVisited) {
+      trackEvent('Portfolio Visited');
+      sessionStorage.setItem('visited', 'true');
+    }
+  }, []);
 
   // Dynamic cursor colors based on theme
   const cursorColor = theme === "dark" ? "255, 1, 79" : "0, 191, 255"; // Pink for dark, Blue for light
