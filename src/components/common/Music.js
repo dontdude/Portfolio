@@ -2,20 +2,21 @@ import React, { useState, useEffect, useRef } from "react";
 // Import the audio file
 // Note: Ensure the path matches exactly. If filename has spaces, import might need care or renaming.
 // Webpack usually handles spaces in imports fine.
-import soundFile from "../assets/Melodysheep - The Wandering Dream.m4a"; 
+import soundFile from "../assets/Melodysheep - The Wandering Dream.m4a";
 
 const Music = () => {
   const [playing, setPlaying] = useState(true);
   const audioRef = useRef(new Audio(soundFile));
 
   useEffect(() => {
+    const audio = audioRef.current;
     // Configure audio
-    audioRef.current.loop = true;
-    audioRef.current.volume = 0.5;
+    audio.loop = true;
+    audio.volume = 0.5;
 
     // Cleanup on unmount
     return () => {
-      audioRef.current.pause();
+      audio.pause();
     };
   }, []);
 
@@ -48,7 +49,11 @@ const Music = () => {
       aria-label={playing ? "Pause Music" : "Play Music"}
       title={playing ? "Pause Music" : "Play Music"}
     >
-      {playing ? <i className="fas fa-volume-up"></i> : <i className="fas fa-volume-mute"></i>}
+      {playing ? (
+        <i className="fas fa-volume-up"></i>
+      ) : (
+        <i className="fas fa-volume-mute"></i>
+      )}
     </button>
   );
 };
