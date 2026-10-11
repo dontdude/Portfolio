@@ -17,8 +17,8 @@ const LINKS = {
 
   // Resume Links (Dynamic Serving)
   // Default is International. India specific link is used based on timezone.
-  resume: "https://drive.google.com/file/d/1kjdDO5u6ywvHLU2ozIiR1snS5URR9Xnz/view", // International
-  resume_india: "https://drive.google.com/file/d/1TJBvqi9wSMtO8u5JOlmbLB3Xf5ZDpg4Y/view", // India
+  resume: "https://drive.google.com/file/d/17e5j2LlbqrtC8o-8NG2nxSnExpET2Neh/view", // International
+  resume_india: "https://drive.google.com/file/d/17e5j2LlbqrtC8o-8NG2nxSnExpET2Neh/view", // India (same as International)
 };
 
 module.exports = { LINKS };

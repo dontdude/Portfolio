@@ -3,7 +3,6 @@ import "./About.css";
 // import logo from "../assets/logo.png";
 //import Resume from "../assets/Resume_ChandanMishra.pdf";
 import ResumeIntl from "../assets/ChandanMishra_Resume.pdf";
-import ResumeIndia from "../assets/ChandanMishra_Resume_SDE.pdf";
 
 //React Reveal
 import Zoom from "react-reveal/Zoom";
@@ -28,18 +27,8 @@ const Features = () => {
   const workIconStyles = { background: "#06D6A0" };
   const schoolIconStyles = { background: "#f9c74f" };
 
-  // Dynamic Resume Logic
+  // Single resume for all regions
   const getResumeData = () => {
-    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    // Check for Indian timezones
-    if (timeZone === 'Asia/Calcutta' || timeZone === 'Asia/Kolkata') {
-        return {
-            pdf: ResumeIndia,
-            link: LINKS.resume_india,
-            name: "ChandanMishra_Resume_SDE.pdf"
-        };
-    }
-    // Default to International
     return {
         pdf: ResumeIntl,
         link: LINKS.resume,
@@ -76,21 +65,25 @@ const Features = () => {
               </p>
               <p className="abt-desc">
                 {" "}
-                &emsp; I engineer <span>robust distributed systems</span> and <span>high-performance frontend interfaces</span>. 
-                My expertise lies in bridging the gap between scalable backend architecture (Go, Kafka, Microservices) and 
-                responsive user experiences (React, TypeScript).
+                &emsp; I'm a <span>Software Development Engineer 1 (Full Stack) at Tata 1mg</span> (35M+ MAU),
+                working on the logistics platform that powers a <span>7.9k-rider fleet across 260 stores</span>.
+                I build Kafka-backed bulk onboarding pipelines, a pluggable delivery-partner platform across 5+ networks
+                (cutting delivery spend by 50%+ on 5.4k daily orders), a rule-based payout engine, WebView infrastructure
+                with OTA releases, and release pipelines that cut bundles from <span>4.4MB to 1.9MB</span>.
               </p>{" "}
               <p className="abt-desc">
                 {" "}
-                &emsp; With a strong foundation in <span>System Design</span>, I don't just write code—I <span>architect solutions</span>. 
-                Whether it's optimizing database queries to slash load by 40% or designing fault-tolerant distributed execution engines, 
-                I build systems that are <span>reliable, maintainable, and efficient</span>.
+                &emsp; Beyond work, I build <span>distributed systems and AI infrastructure</span>: <span>Goxec</span>, a
+                remote code execution engine in Go (Token Bucket gateway, Redis Streams, PEL crash recovery, sub-500ms
+                cold starts), and <span>Runbook-assistant</span>, a Java/Spring Boot RAG service with hybrid search (RRF),
+                cross-encoder reranking (recall@1 0.64 to 0.79), SSE citation-backed answers, and an MCP server for
+                Claude Desktop — with retrieval metrics gating every build.
               </p>{" "}
               <p className="abt-desc">
                 {" "}
-                &emsp; I treat engineering as a craft. From establishing strict <span>TypeScript standards</span> to mentoring teams on 
-                architectural patterns, I drive <span>technical excellence</span>. I thrive on solving complex problems where off-the-shelf 
-                solutions fall short, ensuring that every technological choice translates directly into <span>long-term business value</span>.
+                &emsp; I also own <span>frontend technical direction</span> for my team — reviewing all frontend code,
+                mentoring 3 engineers, and driving the React 19 migration that eliminated 200+ vulnerabilities. Competitive
+                programming keeps me sharp: <span>LeetCode 1707 (Top 12%, 500+ solved)</span> and CodeForces Specialist (1412).
               </p>{" "}
               <p className="abt-desc">
                 {" "}

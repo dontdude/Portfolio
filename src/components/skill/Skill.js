@@ -22,11 +22,11 @@ const Skill = () => {
                 <img className="img-shadow" src={frontend} alt="Frontend" width="600" height="400" />
                 <h2 className="card-title">Frontend</h2>
                 <ul>
-                  <li>React.js, Next.js, Redux</li>
-                  <li>WebSockets, WebView Architecture</li>
-                  <li>TypeScript, JavaScript, HTML5</li>
-                  <li>Chrome DevTools Protocol</li>
-                  <li>Tailwind CSS, SASS</li>
+                  <li>JavaScript / TypeScript, React.js, Next.js</li>
+                  <li>Redux, WebSockets, WebView Architecture</li>
+                  <li>SSE Streaming, A/B Testing, OTA Releases</li>
+                  <li>Bundle Optimization (4.4MB to 1.9MB)</li>
+                  <li>React 19 Migration, Tailwind CSS, SASS</li>
                 </ul>
               </div>
             </Zoom>
@@ -35,23 +35,23 @@ const Skill = () => {
                 <img className="img-shadow" src={backend} alt="Backend" width="600" height="400" />
                 <h2 className="card-title">Backend & Systems</h2>
                 <ul>
-                  <li>Docker, Kubernetes, AWS</li>
-                  <li>Redis (Streams/PubSub), Kafka</li>
-                  <li>Microservices, Event-Driven Arch</li>
-                  <li>Go (Golang), Python, Node.js</li>
-                  <li>SQL (PostgreSQL), Nginx, Linux</li>
+                  <li>Go, Java (Spring Boot), Python, C++, Node.js</li>
+                  <li>Kafka, Redis Streams, Microservices, REST APIs</li>
+                  <li>PostgreSQL (pgvector), MongoDB, Redis</li>
+                  <li>RAG Pipelines, Hybrid Search (RRF), Reranking</li>
+                  <li>Token Bucket, Consumer Groups, PEL / DLQ</li>
                 </ul>
               </div>
             </Zoom>
             <Zoom bottom className="skill-card-wrapper">
               <div className="skl-card">
                 <img className="img-shadow" src={general} alt="Tools" width="600" height="400" />
-                <h2 className="card-title">Tools & DevOps</h2>
+                <h2 className="card-title">Cloud, DevOps & AI Tools</h2>
                 <ul>
-                  <li>Git, GitHub Actions, CI/CD</li>
-                  <li>System Design, Monorepo</li>
-                  <li>Atomic Design Principles</li>
-                  <li>Performance Optimization</li>
+                  <li>AWS (EC2, S3), Kubernetes, Docker, Nginx</li>
+                  <li>CI/CD, Git, Linux, MCP Servers</li>
+                  <li>Claude Code, Eval-Gated Quality (CI Gates)</li>
+                  <li>System Design, Performance Optimization</li>
                   <li>Agile/Scrum Methodologies</li>
                 </ul>
               </div>

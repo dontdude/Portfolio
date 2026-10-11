@@ -13,7 +13,7 @@ const Projects = () => {
       <section className='Prj' id='project'>
           <h1 className='title'>{"< Featured Projects />"}</h1>
           
-          {/* Render Featured Projects (Goxec, NyaySetu) */}
+          {/* Render Featured Projects (Goxec, Runbook-assistant) */}
           {FeaturedProjectsData.map((project) => (
              <FeaturedProject key={project.id} project={project} />
           ))}

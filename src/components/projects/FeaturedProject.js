@@ -19,6 +19,7 @@ const FeaturedProject = ({ project }) => {
     <div className='Featured-card'>
       <Zoom bottom>
         <div className='Featured-content'>
+          {project.img && (
           <div className='Featured-left'>
             <div className='Featured-img-container' onClick={toggleZoom}>
                 <img src={project.img} alt={project.title} className='Featured-img' />
@@ -27,6 +28,7 @@ const FeaturedProject = ({ project }) => {
                 </div>
             </div>
           </div>
+          )}
           <div className='Featured-right'>
             <div className='Featured-header'>
                 <span className='Featured-category'>{project.category}</span>
@@ -64,7 +66,7 @@ const FeaturedProject = ({ project }) => {
       </Zoom>
 
       {/* Image Modal */}
-      {isZoomed && (
+      {isZoomed && project.img && (
         <div className='modal' onClick={toggleZoom}>
             <div className='overlay'></div>
             <div className='modal-content-img'>
