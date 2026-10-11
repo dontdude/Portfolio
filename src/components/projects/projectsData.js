@@ -1,4 +1,5 @@
 import goxecImg from "../assets/goxec_architecture.png";
+import runbookDemo from "../assets/runbook_demo.gif";
 
 
 const FeaturedProjectsData = [
@@ -20,7 +21,7 @@ const FeaturedProjectsData = [
     id: 2,
     title: "Runbook-assistant",
     category: "AI Document Assistant (RAG + MCP)",
-    img: null,
+    img: runbookDemo,
     description: "A production-grade RAG document assistant rebuilt from open source: hybrid search (keyword + vector fused by RRF) with cross-encoder reranking (recall@1 0.64 to 0.79 on an 89-case golden set), SSE citation-backed answers with token/cost tracking, an MCP server for Claude Desktop, and a minimal React chat/upload/search UI.",
     techStack: ["Java", "Spring Boot", "PostgreSQL (pgvector)", "Hybrid Search (RRF)", "MCP", "React", "SSE"],
     repoUrl: "https://github.com/dontdude/Runbook-assistant",
